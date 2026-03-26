@@ -337,6 +337,18 @@
 
   // ========== 预览页操作 ==========
   function bindPreviewActions() {
+    // 保存长按弹窗逻辑
+    const saveSheetClose = document.getElementById('saveSheetClose');
+    const saveOverlay = document.getElementById('saveOverlay');
+    const saveSheet = document.getElementById('saveSheet');
+
+    const closeSaveSheet = () => {
+      saveSheet.classList.remove('active');
+      saveOverlay.classList.remove('active');
+    };
+    saveSheetClose.addEventListener('click', closeSaveSheet);
+    saveOverlay.addEventListener('click', closeSaveSheet);
+
     // 保存到相册
     document.getElementById('btnSave').addEventListener('click', handleSaveCard);
 
@@ -405,9 +417,22 @@
       cardEl.style.boxShadow = origBoxShadow;
       cardEl.style.margin = origMargin;
 
-      // 下载图片
-      downloadDataUrl(dataUrl, 'webreak-card-' + state.formData.name + '.png');
-      saveBtn.innerHTML = '<span class="material-symbols-outlined">check</span> 已保存';
+      // 综合下载策略：Web Share API -> a.download -> 长按保存
+      const filename = 'webreak-card-' + state.formData.name + '.png';
+      const downloadSuccess = await downloadDataUrl(dataUrl, filename);
+
+      if (!downloadSuccess) {
+        // 展示弹窗，提醒长按保存 (兜底方案)
+        const saveSheet = document.getElementById('saveSheet');
+        const saveOverlay = document.getElementById('saveOverlay');
+        const generatedImage = document.getElementById('generatedImage');
+
+        generatedImage.src = dataUrl;
+        saveSheet.classList.add('active');
+        saveOverlay.classList.add('active');
+      }
+
+      saveBtn.innerHTML = '<span class="material-symbols-outlined">check</span> 生成成功';
       setTimeout(() => {
         saveBtn.innerHTML = '<span class="material-symbols-outlined">download</span> 保存破冰卡片到相册';
       }, 2000);
@@ -421,13 +446,60 @@
     }
   }
 
-  function downloadDataUrl(dataUrl, filename) {
-    const link = document.createElement('a');
-    link.download = filename;
-    link.href = dataUrl;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  // 辅助函数：将 dataUrl 转换为 Blob
+  function dataURLtoBlob(dataurl) {
+    let arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new Blob([u8arr], { type: mime });
+  }
+
+  // 综合下载策略：Web Share API -> a.download -> 长按保存(返回 false)
+  async function downloadDataUrl(dataUrl, filename) {
+    // 1. 尝试 Web Share API（适用于 iOS/Andriod 原生浏览器，体验最好）
+    try {
+      if (navigator.canShare) {
+        const blob = dataURLtoBlob(dataUrl);
+        const file = new File([blob], filename, { type: blob.type });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            files: [file],
+            title: 'WeBreak 破冰卡',
+            text: '这是我的 WeBreak 破冰卡'
+          });
+          return true; // 分享/保存成功
+        }
+      }
+    } catch (err) {
+      console.log('Web Share API failed:', err);
+      // 用户主动取消，不需要弹出后备弹窗
+      if (err.name === 'AbortError' || (err.message && err.message.includes('abort'))) {
+        return true; 
+      }
+    }
+
+    // 2. 尝试传统 a 标签下载（适用于 PC 和部分非严格沙盒浏览器）
+    const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (!isWeChat && !isMobile) {
+      try {
+        const link = document.createElement('a');
+        link.download = filename;
+        link.href = dataUrl;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        return true;
+      } catch (err) {
+        console.log('Direct download failed:', err);
+      }
+    }
+
+    // 3. 上述方案均不可用，微信或移动端强制限制，返回 false 触发兜底的“长按保存”弹窗
+    return false;
   }
 
   function loadDomToImage() {

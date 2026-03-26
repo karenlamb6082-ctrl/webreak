@@ -371,7 +371,21 @@
     </div>
   </main>
 
-
+  <!-- ========== 保存图片弹窗 ========== -->
+  <div class="sheet-overlay" id="saveOverlay" style="z-index: 100;"></div>
+  <div class="sheet" id="saveSheet" style="z-index: 101; max-height: 90vh;">
+    <div class="sheet__handle"></div>
+    <div class="sheet__header">
+      <h3 class="sheet__title">长按上方图片保存到相册</h3>
+      <button class="sheet__close" id="saveSheetClose">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="sheet__body" style="text-align: center; overflow: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; background: var(--surface-container-lowest); padding-top: var(--space-4);">
+      <img id="generatedImage" alt="破冰卡预览" style="max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 4px 12px rgba(61,99,126,0.15);" />
+      <p style="margin-top: 1rem; color: var(--outline-variant); font-size: 0.8125rem;">如果长按无法保存，请手动尝试截屏</p>
+    </div>
+  </div>
 
   <!-- ========== MBTI 底部弹窗 ========== -->
   <div class="sheet-overlay" id="mbtiOverlay"></div>
