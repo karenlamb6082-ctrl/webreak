@@ -515,8 +515,8 @@
   function loadDomToImage() {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      // 使用更稳定、速度更快的国内 npm 镜像源
-      script.src = 'https://npm.elemecdn.com/dom-to-image-more@3.4.5/dist/dom-to-image-more.min.js';
+      // 完全使用本地化版本，彻底切断外部依赖
+      script.src = 'js/dom-to-image-more.min.js';
       
       const timeout = setTimeout(() => {
         reject(new Error('CDN 加载超时'));
