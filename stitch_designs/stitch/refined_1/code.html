@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>首页 - 破冰卡生成器</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#566166",
+              "surface-variant": "#d9e4ea",
+              "tertiary-dim": "#4d545a",
+              "tertiary-container": "#e0e6ee",
+              "tertiary-fixed-dim": "#d2d8e0",
+              "outline": "#717c82",
+              "on-secondary-fixed-variant": "#4e5d6f",
+              "error-container": "#fe8983",
+              "on-error-container": "#752121",
+              "on-primary": "#f3f8ff",
+              "secondary-fixed": "#d4e4fa",
+              "secondary-fixed-dim": "#c6d6ec",
+              "on-tertiary-container": "#4e545b",
+              "surface-container-lowest": "#ffffff",
+              "background": "#f7f9fb",
+              "primary-fixed": "#d3e4f6",
+              "on-surface": "#2a3439",
+              "secondary-container": "#d4e4fa",
+              "error": "#9f403d",
+              "on-secondary-container": "#445365",
+              "inverse-primary": "#dcedff",
+              "primary": "#50606f",
+              "inverse-on-surface": "#9a9d9f",
+              "on-tertiary-fixed-variant": "#585e65",
+              "surface-container-high": "#e1e9ee",
+              "secondary-dim": "#465467",
+              "outline-variant": "#a9b4b9",
+              "tertiary": "#596066",
+              "on-primary-container": "#435462",
+              "on-tertiary": "#f6f9ff",
+              "tertiary-fixed": "#e0e6ee",
+              "surface-container": "#e8eff3",
+              "surface": "#f7f9fb",
+              "error-dim": "#4e0309",
+              "on-tertiary-fixed": "#3b4248",
+              "surface-dim": "#cfdce3",
+              "surface-tint": "#50606f",
+              "secondary": "#526073",
+              "primary-dim": "#445463",
+              "surface-bright": "#f7f9fb",
+              "on-primary-fixed-variant": "#4d5d6c",
+              "on-secondary-fixed": "#324052",
+              "inverse-surface": "#0b0f10",
+              "surface-container-highest": "#d9e4ea",
+              "surface-container-low": "#f0f4f7",
+              "primary-container": "#d3e4f6",
+              "on-primary-fixed": "#31414f",
+              "on-error": "#fff7f6",
+              "primary-fixed-dim": "#c5d6e8",
+              "on-secondary": "#f7f9ff",
+              "on-background": "#2a3439"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f7f9fb;
+            color: #2a3439;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 z-40 w-full px-8 py-4 flex justify-between items-center bg-[#f7f9fb] dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#50606f] dark:text-[#b9cadb]">arrow_back</span>
+<h1 class="text-lg font-semibold text-[#50606f] dark:text-[#b9cadb]">Icebreakers</h1>
+</div>
+<div class="flex gap-6 items-center">
+<span class="text-[#50606f] font-semibold font-['Manrope'] tracking-tight cursor-pointer">Discover</span>
+<span class="text-[#566166] font-normal font-['Manrope'] tracking-tight cursor-pointer hover:bg-[#f0f4f7] transition-colors rounded-full px-3 py-1">Saved</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-2xl px-6 pt-12 pb-32 flex flex-col items-center text-center">
+<!-- Hero Section -->
+<section class="mb-16 space-y-6">
+<h2 class="text-4xl md:text-5xl font-medium tracking-tight text-on-background leading-tight">
+                给新好友发一张破冰卡
+            </h2>
+<p class="text-lg text-on-surface-variant font-normal max-w-md mx-auto leading-relaxed">
+                用不到一分钟生成一张自然的自我介绍图
+            </p>
+</section>
+<!-- CTA Button -->
+<div class="mb-20">
+<button class="bg-primary hover:bg-primary-dim text-on-primary px-12 py-4 rounded-full text-lg font-semibold transition-all scale-100 active:scale-95 shadow-lg shadow-primary/10">
+                开始制作
+            </button>
+</div>
+<!-- Visual Preview (The Card) -->
+<section class="w-full relative group">
+<!-- Decorative atmospheric background elements -->
+<div class="absolute -inset-4 bg-primary-container/20 blur-3xl rounded-full opacity-50 -z-10 group-hover:opacity-70 transition-opacity"></div>
+<div class="bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-[0_40px_80px_rgba(0,0,0,0.03)] border border-outline-variant/10 text-left max-w-lg mx-auto">
+<div class="mb-10 aspect-[3/4] overflow-hidden rounded-lg bg-surface-container-low">
+<img alt="Self-introduction preview" class="w-full h-full object-cover grayscale-[0.2] contrast-[0.9]" data-alt="Minimalist portrait of a creative professional in a sunlit studio with soft natural light and clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmNi2iMrv3K3tjDe0_ET1Jg-TFPYuIWTI2pvhxRNMHTM9cyPwBqOS1t-qp0BN08DfloTm107vtZ1YAfDLg5IcWx3z64TgGVPneSOwCsVrplsSEdeFhH4XRqs-S7lFIoW3p7dlD7UpXJ98Lqc1YY2-CJMephXkQBW4gGu-pHNk9r3fy45PO9J8CPGshrxsntEcYGJEyIEMt8QhQJ5Fcvt_kF6228ob0y9jtMLdZmaURJitIjfBinLV1DLV3Mp0lJqSjJuIx99Ym4js"/>
+</div>
+<div class="space-y-4">
+<div class="h-1.5 w-12 bg-primary-container rounded-full"></div>
+<h3 class="text-2xl font-semibold text-primary">你好，我是 Alex</h3>
+<p class="text-on-surface-variant leading-relaxed font-normal">
+                        喜欢在清晨摄影，对极简设计有着近乎执着的追求。目前正在探索如何用科技让社交变得更温暖。
+                    </p>
+<div class="pt-6 flex gap-4 text-sm font-medium text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> 上海</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">interests</span> 摄影 / 徒步</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Floating Accents -->
+<div class="hidden md:block absolute -right-12 top-1/4 bg-surface-container-high/80 backdrop-blur-md px-6 py-4 rounded-lg shadow-sm">
+<p class="text-sm font-medium text-on-surface-variant italic">"自然、不显突兀的开场"</p>
+</div>
+<div class="hidden md:block absolute -left-8 bottom-1/4 bg-primary-container/30 backdrop-blur-sm p-4 rounded-full">
+<span class="material-symbols-outlined text-primary" data-weight="fill">auto_awesome</span>
+</div>
+</section>
+<!-- Secondary Content Section: Editorial Style -->
+<section class="mt-32 w-full grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+<div class="bg-surface-container-low p-8 rounded-lg space-y-4">
+<div class="w-10 h-10 bg-surface-container-lowest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+</div>
+<h4 class="text-xl font-semibold text-primary">极简编辑</h4>
+<p class="text-on-surface-variant">只需填写核心信息，系统将自动调整排版与色彩，确保每一张导出的图片都具备海报质感。</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg space-y-4">
+<div class="w-10 h-10 bg-surface-container-lowest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">palette</span>
+</div>
+<h4 class="text-xl font-semibold text-primary">柔和色调</h4>
+<p class="text-on-surface-variant">内置 12 组由顶级设计师调校的呼吸感配色，适配各种社交氛围，让第一印象更自在。</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 mx-auto w-[92%] max-w-md z-50 flex justify-around items-center p-2 bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-xl rounded-[48px] shadow-[0_12px_40px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center bg-[#50606f] text-white rounded-full px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-weight="fill">auto_awesome</span>
+<span class="font-['Manrope'] text-[12px] font-medium tracking-wide">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#566166] px-6 py-2 hover:text-[#50606f] transition-all" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-['Manrope'] text-[12px] font-medium tracking-wide">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#566166] px-6 py-2 hover:text-[#50606f] transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[12px] font-medium tracking-wide">Profile</span>
+</a>
+</nav>
+</body></html>

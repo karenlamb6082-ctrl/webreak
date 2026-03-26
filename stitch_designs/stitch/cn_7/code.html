@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#4c5078",
+              "on-tertiary-fixed": "#2d3157",
+              "secondary-fixed": "#d3e5f5",
+              "error-container": "#fa746f",
+              "error-dim": "#67040d",
+              "tertiary": "#585c85",
+              "secondary": "#50616f",
+              "on-background": "#2c3437",
+              "on-secondary-fixed": "#31414e",
+              "tertiary-container": "#cbcefe",
+              "tertiary-fixed-dim": "#bdc0ef",
+              "on-primary": "#f5f9ff",
+              "on-error-container": "#6e0a12",
+              "surface-container-highest": "#dce4e8",
+              "secondary-container": "#d3e5f5",
+              "on-surface": "#2c3437",
+              "on-error": "#fff7f6",
+              "primary": "#3d637e",
+              "primary-dim": "#315771",
+              "surface-container-high": "#e3e9ed",
+              "primary-container": "#b3d9f9",
+              "on-primary-container": "#264d67",
+              "outline": "#747c80",
+              "secondary-dim": "#445563",
+              "inverse-primary": "#b3d9f9",
+              "on-surface-variant": "#596064",
+              "on-primary-fixed-variant": "#305671",
+              "surface-container": "#eaeff2",
+              "surface-bright": "#f7f9fb",
+              "secondary-fixed-dim": "#c5d7e7",
+              "outline-variant": "#acb3b7",
+              "tertiary-fixed": "#cbcefe",
+              "on-tertiary-fixed-variant": "#4a4d76",
+              "on-primary-fixed": "#0e3a53",
+              "surface-tint": "#3d637e",
+              "on-tertiary-container": "#41446c",
+              "on-tertiary": "#fbf8ff",
+              "surface-dim": "#d4dbdf",
+              "on-secondary": "#f5f9ff",
+              "inverse-on-surface": "#9a9d9f",
+              "error": "#a83836",
+              "primary-fixed": "#b3d9f9",
+              "background": "#f7f9fb",
+              "on-secondary-fixed-variant": "#4d5d6b",
+              "surface-container-low": "#f0f4f7",
+              "surface": "#f7f9fb",
+              "on-secondary-container": "#435461",
+              "primary-fixed-dim": "#a5cbea",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#0b0f10",
+              "surface-variant": "#dce4e8"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #f7f9fb;
+        color: #2c3437;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-[#f7f9fb] dark:bg-slate-900 no-border tonal-layering-via-bg-shift">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#3d637e] dark:text-[#b3d9f9] transition-transform active:scale-95 duration-200 ease-out-quint cursor-pointer">menu</span>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#3d637e] dark:text-[#b3d9f9]">WeBreak 破冰卡</h1>
+<div class="w-6"></div> <!-- Spacer for center alignment -->
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full">
+<!-- Hero Section / Context -->
+<header class="mb-10 text-center">
+<h2 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface mb-3">定制你的社交名片</h2>
+<p class="font-body text-on-surface-variant leading-relaxed">简单几步，让新朋友通过卡片快速了解你</p>
+</header>
+<section class="space-y-12">
+<!-- Input: Name -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary block px-1">别人怎么称呼你</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-xl py-4 px-5 focus:ring-2 focus:ring-primary-container text-on-surface placeholder:text-outline-variant font-body" placeholder="输入你的昵称..." type="text"/>
+</div>
+</div>
+<!-- Section: 聊天风格 -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary block px-1">聊天风格</label>
+<div class="flex flex-wrap gap-3">
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">随缘</button>
+<button class="rounded-full px-6 py-2.5 bg-primary-fixed text-on-primary-fixed font-bold text-sm shadow-sm ring-2 ring-primary/10">话痨</button>
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">言简意赅</button>
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">表情包大户</button>
+</div>
+</div>
+<!-- Section: 回复节奏 -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary block px-1">回复节奏</label>
+<div class="flex flex-wrap gap-3">
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">秒回</button>
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">忙完回</button>
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">意念回复</button>
+<button class="rounded-full px-6 py-2.5 bg-primary-fixed text-on-primary-fixed font-bold text-sm shadow-sm ring-2 ring-primary/10">看心情</button>
+</div>
+</div>
+<!-- Section: 相处偏好 -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary block px-1">相处偏好</label>
+<div class="flex flex-wrap gap-3">
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">自来熟</button>
+<button class="rounded-full px-6 py-2.5 bg-primary-fixed text-on-primary-fixed font-bold text-sm shadow-sm ring-2 ring-primary/10">慢热</button>
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">保持边界</button>
+<button class="rounded-full px-6 py-2.5 bg-secondary-container text-on-secondary-container font-medium text-sm transition-all hover:bg-primary-container active:scale-95">直球型</button>
+</div>
+</div>
+<!-- Section: MBTI 类型 -->
+<div class="space-y-4">
+<div class="flex justify-between items-end px-1">
+<label class="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary block">MBTI 类型</label>
+<span class="text-[10px] text-outline-variant font-medium">16型人格</span>
+</div>
+<div class="grid grid-cols-4 sm:grid-cols-8 gap-2">
+<!-- MBTI Row 1 -->
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">INTJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">INTP</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ENTJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ENTP</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-primary-fixed text-[11px] font-headline font-bold text-on-primary-fixed border border-primary/20">INFJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">INFP</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ENFJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ENFP</button>
+<!-- MBTI Row 2 -->
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ISTJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ISFJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ESTJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ESFJ</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ISTP</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ISFP</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ESTP</button>
+<button class="aspect-square flex items-center justify-center rounded-xl bg-surface-container-lowest text-[11px] font-headline font-bold text-on-surface-variant border border-outline-variant/10 hover:bg-primary-container transition-colors">ESFP</button>
+</div>
+</div>
+<!-- Section: 一句备注 -->
+<div class="space-y-4">
+<label class="font-label text-xs font-bold uppercase tracking-[0.1em] text-primary block px-1">一句备注</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-xl py-4 px-5 focus:ring-2 focus:ring-primary-container text-on-surface placeholder:text-outline-variant font-body resize-none" placeholder="写一句关于你的话，或者你想对新朋友说的话..." rows="3"></textarea>
+</div>
+<!-- Action: Generate Button -->
+<div class="pt-6">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-headline font-bold text-lg shadow-lg hover:shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+<span>生成破冰卡</span>
+<span class="material-symbols-outlined text-xl" data-icon="auto_awesome">auto_awesome</span>
+</button>
+<p class="text-center text-[11px] text-outline-variant mt-4 font-medium">卡片生成后将自动保存至您的画册</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0px_-10px_30px_rgba(61,99,126,0.05)] rounded-t-[2rem]">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-[#3d637e] dark:hover:text-[#b3d9f9] transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#b3d9f9] dark:bg-[#3d637e] text-[#3d637e] dark:text-[#b3d9f9] rounded-full px-5 py-1.5 transition-all duration-300 shadow-sm">
+<span class="material-symbols-outlined mb-1" data-icon="style" style="font-variation-settings: 'FILL' 1;">style</span>
+<span class="font-['Manrope'] text-[10px] font-bold tracking-wide uppercase">Cards</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-[#3d637e] dark:hover:text-[#b3d9f9] transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase">Profile</span>
+</div>
+</nav>
+<!-- Decorative Soft Background Element -->
+<div class="fixed top-[-10%] right-[-10%] w-[50%] h-[40%] bg-primary-container/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
+<div class="fixed bottom-[-5%] left-[-5%] w-[40%] h-[30%] bg-tertiary-container/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
+</body></html>

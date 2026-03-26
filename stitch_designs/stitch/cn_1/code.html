@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WeBreak 破冰 - 首页</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#d9e4ea",
+              "on-secondary-fixed-variant": "#565c63",
+              "primary": "#466178",
+              "on-primary-fixed-variant": "#435e75",
+              "surface-container-low": "#f0f4f7",
+              "on-background": "#2a3439",
+              "on-surface": "#2a3439",
+              "outline-variant": "#a9b4b9",
+              "on-primary-fixed": "#264257",
+              "on-primary": "#f4f8ff",
+              "primary-fixed": "#cbe6ff",
+              "surface-dim": "#cfdce3",
+              "surface-variant": "#d9e4ea",
+              "error-container": "#fe8983",
+              "surface-container-high": "#e1e9ee",
+              "on-primary-container": "#39546b",
+              "on-error": "#fff7f6",
+              "surface-container": "#e8eff3",
+              "tertiary-fixed-dim": "#c7d5ee",
+              "secondary-fixed": "#dde3eb",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#566166",
+              "on-secondary-fixed": "#3a4046",
+              "secondary-container": "#dde3eb",
+              "primary-dim": "#3a556b",
+              "tertiary-fixed": "#d5e3fd",
+              "background": "#f7f9fb",
+              "primary-fixed-dim": "#bbd8f2",
+              "on-tertiary-container": "#455367",
+              "surface-tint": "#466178",
+              "tertiary": "#526075",
+              "outline": "#717c82",
+              "secondary": "#596066",
+              "tertiary-container": "#d5e3fd",
+              "secondary-dim": "#4d545a",
+              "inverse-surface": "#0b0f10",
+              "error": "#9f403d",
+              "error-dim": "#4e0309",
+              "on-tertiary-fixed-variant": "#4e5c71",
+              "on-secondary": "#f6f9ff",
+              "secondary-fixed-dim": "#cfd5dd",
+              "on-error-container": "#752121",
+              "surface": "#f7f9fb",
+              "primary-container": "#cbe6ff",
+              "tertiary-dim": "#465469",
+              "on-tertiary-fixed": "#324054",
+              "on-secondary-container": "#4c5259",
+              "inverse-primary": "#b9d5f0",
+              "inverse-on-surface": "#9a9d9f",
+              "on-tertiary": "#f8f8ff",
+              "surface-bright": "#f7f9fb"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .icebreaker-bubble {
+            border-radius: 3rem 3rem 0.5rem 3rem;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(203, 230, 255, 0.1) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fb]/80 backdrop-blur-md shadow-sm shadow-[#2a3439]/5">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#466178]" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-[#466178] font-bold tracking-tighter text-lg">WeBreak 破冰</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#466178] font-bold transition-opacity hover:opacity-80" href="#">首页</a>
+<a class="text-[#466178]/60 transition-opacity hover:opacity-80" href="#">历史</a>
+<a class="text-[#466178]/60 transition-opacity hover:opacity-80" href="#">我的</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#466178]/60" data-icon="more_horiz">more_horiz</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-2xl mx-auto flex flex-col items-center text-center">
+<!-- Hero Section -->
+<div class="mb-12">
+<h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-on-surface mb-6 leading-tight">
+                给新好友发一张破冰卡
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-md mx-auto font-body">
+                用不到一分钟生成一张自然的自我介绍图
+            </p>
+</div>
+<!-- Main Action -->
+<div class="mb-20 w-full flex justify-center">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-semibold text-lg active:scale-95 transition-transform duration-200 shadow-xl shadow-primary/10">
+                开始制作
+            </button>
+</div>
+<!-- Visual Preview / Icebreaker Card -->
+<div class="w-full relative group">
+<!-- Decorative Background Element -->
+<div class="absolute -inset-4 bg-primary-container/20 blur-3xl rounded-full -z-10 opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="icebreaker-bubble p-8 md:p-12 shadow-[0_24px_48px_-12px_rgba(42,52,57,0.08)] border border-white/50 text-left">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-14 h-14 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="soft portrait of a young woman with a friendly expression in natural daylight against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2z6bcPIfocmSbmHbmpKLGp0lFCZCNhf4Bu8bKxe44B0nX0uYTaicDuVFdKhUaRFD-lJaBgTEeFmgWPaHPYRJYN82gGqToeZ2GChrf4MDqkCZsp9DMrKnsWugAYEL_t1lIonKCZ0U7JbQ-4unpZKA9eKiFmrJJGt_WXc0d35irkPGqIpvNeV-QpoIbxP9AJ1CJarGHg8Q_bEXd9qbPiqYrPW-iPPBUeiYE5DmV8vfFE4LsMGf4nyT4NZWn9mMLEnEEF6KjMhplZow"/>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-primary">你好，我是 Alex</h3>
+<p class="text-sm text-on-surface-variant tracking-wider uppercase font-label">Hi, I'm Alex</p>
+</div>
+</div>
+<div class="space-y-6">
+<p class="text-2xl md:text-3xl text-on-surface leading-snug font-medium">
+                        喜欢<span class="text-primary/60">摄影</span>和<span class="text-primary/60">城市漫步</span>。
+                    </p>
+<p class="text-lg text-on-surface-variant/80 leading-relaxed font-body">
+                        正在探索上海街头有趣的小店，<br/>
+                        希望能和你开启一段有趣的对话。
+                    </p>
+</div>
+<div class="mt-12 flex flex-wrap gap-3">
+<span class="bg-surface-container-low text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium">📷 徕卡玩家</span>
+<span class="bg-surface-container-low text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium">☕️ 每天三杯咖啡</span>
+<span class="bg-surface-container-low text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium">🚶 弄堂漫游者</span>
+</div>
+<div class="mt-12 pt-8 border-t border-primary/5 flex justify-between items-center opacity-40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="qr_code_2">qr_code_2</span>
+<span class="text-[10px] tracking-widest uppercase font-label">Scan to Connect</span>
+</div>
+<span class="text-[10px] tracking-widest uppercase font-label">Created via WeBreak</span>
+</div>
+</div>
+<!-- Floating Decorative Label -->
+<div class="absolute -top-4 -right-4 md:-right-8 bg-surface-container-lowest border border-primary-container/30 px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-xs font-bold text-primary tracking-wide">预览示例</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-8 pt-4 bg-white/80 backdrop-blur-md rounded-t-[3rem] z-50 shadow-[0_-4px_24px_rgba(42,52,57,0.04)]">
+<a class="flex flex-col items-center justify-center bg-[#cbe6ff] text-[#466178] rounded-full p-3 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="style" style="font-variation-settings: 'FILL' 1;">style</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-3 hover:bg-[#f7f9fb] rounded-full transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-3 hover:bg-[#f7f9fb] rounded-full transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+</body></html>

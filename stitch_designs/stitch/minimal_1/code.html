@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Landing - Icebreaker Tool</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#f4f8ff",
+              "tertiary-fixed-dim": "#c7d5ee",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#435e75",
+              "tertiary": "#526075",
+              "inverse-surface": "#0b0f10",
+              "on-tertiary-fixed-variant": "#4e5c71",
+              "on-tertiary-container": "#455367",
+              "surface-container": "#e8eff3",
+              "surface-bright": "#f7f9fb",
+              "surface-container-highest": "#d9e4ea",
+              "primary": "#466178",
+              "on-primary-container": "#39546b",
+              "on-secondary": "#f6f9ff",
+              "tertiary-fixed": "#d5e3fd",
+              "inverse-on-surface": "#9a9d9f",
+              "primary-dim": "#3a556b",
+              "surface-container-low": "#f0f4f7",
+              "outline": "#717c82",
+              "surface": "#f7f9fb",
+              "secondary": "#596066",
+              "secondary-fixed": "#dde3eb",
+              "error": "#9f403d",
+              "on-surface": "#2a3439",
+              "primary-container": "#cbe6ff",
+              "surface-dim": "#cfdce3",
+              "primary-fixed": "#cbe6ff",
+              "on-primary-fixed": "#264257",
+              "surface-container-high": "#e1e9ee",
+              "on-tertiary": "#f8f8ff",
+              "tertiary-container": "#d5e3fd",
+              "surface-tint": "#466178",
+              "on-secondary-fixed-variant": "#565c63",
+              "secondary-dim": "#4d545a",
+              "background": "#f7f9fb",
+              "primary-fixed-dim": "#bbd8f2",
+              "on-surface-variant": "#566166",
+              "error-container": "#fe8983",
+              "on-error-container": "#752121",
+              "on-background": "#2a3439",
+              "secondary-container": "#dde3eb",
+              "outline-variant": "#a9b4b9",
+              "tertiary-dim": "#465469",
+              "on-tertiary-fixed": "#324054",
+              "secondary-fixed-dim": "#cfd5dd",
+              "error-dim": "#4e0309",
+              "surface-variant": "#d9e4ea",
+              "on-secondary-fixed": "#3a4046",
+              "on-error": "#fff7f6",
+              "on-secondary-container": "#4c5259",
+              "inverse-primary": "#b9d5f0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .icebreaker-bubble {
+            border-radius: 3rem 3rem 3rem 0.5rem;
+        }
+        body {
+            background-color: #f7f9fb;
+            color: #2a3439;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container">
+<!-- Top Navigation Bar (The Anchor) -->
+<nav class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-slate-900 flex items-center justify-between px-6 py-4 w-full max-w-md mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#466178] dark:text-[#cbe6ff] text-2xl">bubble_chart</span>
+<span class="font-manrope font-semibold text-[#466178] dark:text-[#cbe6ff] tracking-tight text-lg">Icebreaker</span>
+</div>
+<button class="text-slate-400 dark:text-slate-500 hover:opacity-80 transition-opacity active:scale-90 duration-200">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-[calc(100vh-160px)] flex flex-col items-center justify-center px-8 pb-24 pt-12 max-w-md mx-auto text-center">
+<!-- Header Section (Asymmetrical Breathing Room) -->
+<header class="mb-16 space-y-4">
+<h1 class="font-headline text-3xl font-semibold text-on-surface tracking-tight leading-tight px-4">
+                Give your new friend an icebreaker card
+            </h1>
+<p class="font-body text-secondary text-lg leading-relaxed px-6 opacity-80">
+                Generate a natural self-introduction in under a minute
+            </p>
+</header>
+<!-- Preview Card (The Soft Poster) -->
+<section class="w-full mb-16 relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-xl blur-2xl transition-all group-hover:blur-3xl opacity-50"></div>
+<div class="relative bg-surface-container-lowest rounded-xl p-8 shadow-[0_24px_48px_rgba(42,52,57,0.06)] overflow-hidden">
+<!-- Decorative subtle texture -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full -mr-16 -mt-16 blur-xl"></div>
+<div class="flex flex-col items-start text-left space-y-8">
+<div class="space-y-2">
+<span class="font-label text-xs uppercase tracking-[0.15em] text-primary/60">Nice to meet you</span>
+<h2 class="font-headline text-2xl font-semibold text-primary">I'm Alex</h2>
+</div>
+<div class="icebreaker-bubble bg-surface-container-low p-6 w-full bg-gradient-to-br from-surface-container-lowest to-primary-container/10">
+<p class="font-body text-on-surface leading-relaxed italic">
+                            "Currently exploring urban photography and hunting for the best flat white in the city. If you know any hidden cafes, let’s talk."
+                        </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium">Photography</span>
+<span class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium">Coffee Enthusiast</span>
+<span class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium">UX Designer</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary CTA -->
+<div class="w-full px-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-headline font-semibold text-lg tracking-wide transition-all duration-200 active:scale-95 shadow-sm">
+                Start
+            </button>
+<p class="mt-6 font-label text-[10px] uppercase tracking-widest text-outline/60">
+                Tap to design your intro
+            </p>
+</div>
+</main>
+<!-- Bottom Navigation (Shared Component Logic) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 rounded-t-[3rem] bg-[#f7f9fb]/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_24px_rgba(42,52,57,0.04)] pb-8 pt-4 flex justify-around items-center px-8">
+<!-- Home (Active) -->
+<button class="flex flex-col items-center justify-center bg-[#cbe6ff] dark:bg-[#466178]/30 text-[#466178] dark:text-[#cbe6ff] rounded-full p-3 scale-98 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="home_app_logo" style="font-variation-settings: 'FILL' 1;">home_app_logo</span>
+</button>
+<!-- Chat (Inactive) -->
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<!-- Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+</button>
+</footer>
+</body></html>

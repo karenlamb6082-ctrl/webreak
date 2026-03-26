@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WeBreak 破冰卡 - 给新好友发一张破冰卡</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#4c5078",
+              "on-tertiary-fixed": "#2d3157",
+              "secondary-fixed": "#d3e5f5",
+              "error-container": "#fa746f",
+              "error-dim": "#67040d",
+              "tertiary": "#585c85",
+              "secondary": "#50616f",
+              "on-background": "#2c3437",
+              "on-secondary-fixed": "#31414e",
+              "tertiary-container": "#cbcefe",
+              "tertiary-fixed-dim": "#bdc0ef",
+              "on-primary": "#f5f9ff",
+              "on-error-container": "#6e0a12",
+              "surface-container-highest": "#dce4e8",
+              "secondary-container": "#d3e5f5",
+              "on-surface": "#2c3437",
+              "on-error": "#fff7f6",
+              "primary": "#3d637e",
+              "primary-dim": "#315771",
+              "surface-container-high": "#e3e9ed",
+              "primary-container": "#b3d9f9",
+              "on-primary-container": "#264d67",
+              "outline": "#747c80",
+              "secondary-dim": "#445563",
+              "inverse-primary": "#b3d9f9",
+              "on-surface-variant": "#596064",
+              "on-primary-fixed-variant": "#305671",
+              "surface-container": "#eaeff2",
+              "surface-bright": "#f7f9fb",
+              "secondary-fixed-dim": "#c5d7e7",
+              "outline-variant": "#acb3b7",
+              "tertiary-fixed": "#cbcefe",
+              "on-tertiary-fixed-variant": "#4a4d76",
+              "on-primary-fixed": "#0e3a53",
+              "surface-tint": "#3d637e",
+              "on-tertiary-container": "#41446c",
+              "on-tertiary": "#fbf8ff",
+              "surface-dim": "#d4dbdf",
+              "on-secondary": "#f5f9ff",
+              "inverse-on-surface": "#9a9d9f",
+              "error": "#a83836",
+              "primary-fixed": "#b3d9f9",
+              "background": "#f7f9fb",
+              "on-secondary-fixed-variant": "#4d5d6b",
+              "surface-container-low": "#f0f4f7",
+              "surface": "#f7f9fb",
+              "on-secondary-container": "#435461",
+              "primary-fixed-dim": "#a5cbea",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#0b0f10",
+              "surface-variant": "#dce4e8"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Manrope', sans-serif;
+            color: #2c3437;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .breath-glow {
+            box-shadow: 0 0 60px 10px rgba(179, 217, 249, 0.3);
+        }
+        .glass-header {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar Mapping -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-[#f7f9fb] dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#3d637e] dark:text-[#b3d9f9] cursor-pointer hover:bg-slate-200/50 transition-colors p-2 rounded-full">menu</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#3d637e] dark:text-[#b3d9f9]">WeBreak 破冰卡</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#3d637e] font-bold font-body text-sm tracking-wide" href="#">Discover</a>
+<a class="text-slate-500 dark:text-slate-400 font-body text-sm tracking-wide hover:text-[#3d637e] transition-colors" href="#">Cards</a>
+<a class="text-slate-500 dark:text-slate-400 font-body text-sm tracking-wide hover:text-[#3d637e] transition-colors" href="#">Profile</a>
+</div>
+<div class="flex items-center">
+<button class="material-symbols-outlined text-[#3d637e] p-2">search</button>
+</div>
+</header>
+<main class="min-h-screen pt-24 pb-32 px-6 flex flex-col items-center max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="text-center mb-16 space-y-6 max-w-2xl">
+<h2 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
+                给新好友发一张<span class="text-primary">破冰卡</span>
+</h2>
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                用不到一分钟生成一张自然的自我介绍图
+            </p>
+<div class="pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-10 py-4 rounded-full font-headline font-bold text-lg shadow-lg shadow-primary/10 active:scale-95 transition-all duration-300">
+                    开始制作
+                </button>
+</div>
+</section>
+<!-- Preview Section: The "Breathable" Card -->
+<section class="relative w-full max-w-xl group">
+<!-- Pulsating Backglow (The Breath Indicator) -->
+<div class="absolute inset-0 bg-primary-container/20 blur-[80px] rounded-full animate-pulse -z-10"></div>
+<div class="bg-surface-container-lowest rounded-xl p-10 md:p-14 shadow-[0px_20px_40px_rgba(61,99,126,0.04)] border border-outline-variant/15 relative overflow-hidden">
+<!-- Card Content: Editorial Style -->
+<div class="space-y-12">
+<header class="flex justify-between items-start">
+<div class="space-y-1">
+<span class="font-label text-xs tracking-widest uppercase text-primary font-bold">Hello, Stranger</span>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="soft portrait of a young woman with a friendly smile, warm natural lighting, minimalist aesthetic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm5yU6btmyOR_Fly20nXsBzNDPArSWaw5lhIytoiljNUmhuGqq9HlrM1lIdRZtZOksUdfFvH2CMoPoJzUI50P6M050NYLIujLVhgvZCOYTftU6npU7EUltFVhsvOog75EUYwpdHlMnswWQIys416SL1_jeS7wR3HhenW9gZj5crOVJXFG5HvGxTXloPRu_WfzT3ZJWC6v8f05tvudC7IrqnmKy6Jmy-EuvVuaGKWlmEBEHXlKUqWtRfe_1urvnqYO1ahG23OJ3yxE"/>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight">林苏意 Suyi</h3>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline text-4xl text-surface-container-highest font-extrabold">01</span>
+</div>
+</header>
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="font-label text-[10px] tracking-[0.1em] uppercase text-outline font-bold">Currently Reading</span>
+<p class="font-headline text-2xl md:text-3xl font-bold text-primary leading-snug">《置身事内》：中国政府与经济发展</p>
+</div>
+<div class="space-y-4">
+<span class="font-label text-[10px] tracking-[0.1em] uppercase text-outline font-bold">About Me</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-low px-4 py-1.5 rounded-full text-sm font-medium text-on-surface-variant">摄影爱好者</span>
+<span class="bg-surface-container-low px-4 py-1.5 rounded-full text-sm font-medium text-on-surface-variant">产品设计师</span>
+<span class="bg-surface-container-low px-4 py-1.5 rounded-full text-sm font-medium text-on-surface-variant">深夜咖啡徒</span>
+<span class="bg-surface-container-low px-4 py-1.5 rounded-full text-sm font-medium text-on-surface-variant">成都土著</span>
+</div>
+</div>
+<div class="pt-4 space-y-4">
+<span class="font-label text-[10px] tracking-[0.1em] uppercase text-outline font-bold">My Icebreaker Question</span>
+<p class="font-headline text-xl md:text-2xl font-bold text-on-surface leading-normal italic">
+                                “如果你可以立刻学会一项新技能，你希望是什么？”
+                            </p>
+</div>
+</div>
+<footer class="pt-8 flex items-center justify-between border-t border-outline-variant/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-dim text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label text-xs text-outline tracking-wider font-semibold">WEBREAK CARD</span>
+</div>
+<div class="w-10 h-10 bg-primary-container/30 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">qr_code_2</span>
+</div>
+</footer>
+</div>
+<!-- Abstract Decorative Shapes -->
+<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="absolute -top-12 -left-12 w-32 h-32 bg-secondary-container/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Floating Decoration Badge -->
+<div class="absolute -top-6 -right-6 md:-right-12 bg-white px-6 py-3 rounded-xl shadow-xl border border-outline-variant/10 hidden md:block">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-body text-sm font-bold text-primary">已生成 12.4k 张卡片</span>
+</div>
+</div>
+</section>
+<!-- Secondary CTA/Minimal Grid -->
+<section class="mt-24 grid md:grid-cols-3 gap-12 w-full">
+<div class="text-center space-y-3">
+<div class="inline-flex items-center justify-center w-12 h-12 bg-surface-container-low rounded-full text-primary mb-2">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<h4 class="font-headline font-bold text-lg">极简录入</h4>
+<p class="font-body text-sm text-on-surface-variant px-4">无需撰写长文，只需回答 3 个有趣的问题即可。</p>
+</div>
+<div class="text-center space-y-3">
+<div class="inline-flex items-center justify-center w-12 h-12 bg-surface-container-low rounded-full text-primary mb-2">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h4 class="font-headline font-bold text-lg">杂志排版</h4>
+<p class="font-body text-sm text-on-surface-variant px-4">自动适配视觉美感，每一张卡片都像杂志封面。</p>
+</div>
+<div class="text-center space-y-3">
+<div class="inline-flex items-center justify-center w-12 h-12 bg-surface-container-low rounded-full text-primary mb-2">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h4 class="font-headline font-bold text-lg">快速分享</h4>
+<p class="font-body text-sm text-on-surface-variant px-4">一键保存为高画质图片，完美适配朋友圈与对话框。</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Mapping -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0px_-10px_30px_rgba(61,99,126,0.05)] md:hidden">
+<div class="flex flex-col items-center justify-center bg-[#b3d9f9] dark:bg-[#3d637e] text-[#3d637e] dark:text-[#b3d9f9] rounded-full px-5 py-1.5 transition-all duration-300">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase mt-0.5">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-[#3d637e] transition-colors">
+<span class="material-symbols-outlined">style</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase mt-0.5">Cards</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-1.5 hover:text-[#3d637e] transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] font-medium tracking-wide uppercase mt-0.5">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Form - Icebreaker Tool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#f4f8ff",
+              "tertiary-fixed-dim": "#c7d5ee",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#435e75",
+              "tertiary": "#526075",
+              "inverse-surface": "#0b0f10",
+              "on-tertiary-fixed-variant": "#4e5c71",
+              "on-tertiary-container": "#455367",
+              "surface-container": "#e8eff3",
+              "surface-bright": "#f7f9fb",
+              "surface-container-highest": "#d9e4ea",
+              "primary": "#466178",
+              "on-primary-container": "#39546b",
+              "on-secondary": "#f6f9ff",
+              "tertiary-fixed": "#d5e3fd",
+              "inverse-on-surface": "#9a9d9f",
+              "primary-dim": "#3a556b",
+              "surface-container-low": "#f0f4f7",
+              "outline": "#717c82",
+              "surface": "#f7f9fb",
+              "secondary": "#596066",
+              "secondary-fixed": "#dde3eb",
+              "error": "#9f403d",
+              "on-surface": "#2a3439",
+              "primary-container": "#cbe6ff",
+              "surface-dim": "#cfdce3",
+              "primary-fixed": "#cbe6ff",
+              "on-primary-fixed": "#264257",
+              "surface-container-high": "#e1e9ee",
+              "on-tertiary": "#f8f8ff",
+              "tertiary-container": "#d5e3fd",
+              "surface-tint": "#466178",
+              "on-secondary-fixed-variant": "#565c63",
+              "secondary-dim": "#4d545a",
+              "background": "#f7f9fb",
+              "primary-fixed-dim": "#bbd8f2",
+              "on-surface-variant": "#566166",
+              "error-container": "#fe8983",
+              "on-error-container": "#752121",
+              "on-background": "#2a3439",
+              "secondary-container": "#dde3eb",
+              "outline-variant": "#a9b4b9",
+              "tertiary-dim": "#465469",
+              "on-tertiary-fixed": "#324054",
+              "secondary-fixed-dim": "#cfd5dd",
+              "error-dim": "#4e0309",
+              "surface-variant": "#d9e4ea",
+              "on-secondary-fixed": "#3a4046",
+              "on-error": "#fff7f6",
+              "on-secondary-container": "#4c5259",
+              "inverse-primary": "#b9d5f0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col items-center">
+<!-- Top Navigation Anchor (Manual Mapping from JSON: Back Arrow + Logo) -->
+<header class="w-full sticky top-0 bg-[#f7f9fb] dark:bg-slate-900 z-40">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-md mx-auto">
+<button class="text-[#466178] dark:text-[#cbe6ff] scale-95 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h1 class="font-manrope font-semibold text-[#466178] dark:text-[#cbe6ff] text-lg tracking-tight">Icebreaker</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="w-full max-w-md px-6 pt-12 pb-32 flex flex-col gap-12">
+<!-- Intro Header -->
+<section class="space-y-2">
+<h2 class="text-3xl font-semibold text-on-surface tracking-tight leading-tight">Create your icebreaker card.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed opacity-80">Set the tone for your future conversations.</p>
+</section>
+<!-- Form Area -->
+<form class="flex flex-col gap-10">
+<!-- Name Input Field -->
+<div class="space-y-4">
+<label class="block text-[11px] font-bold uppercase tracking-[0.1em] text-on-surface-variant ml-1">Your Name</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-lg px-6 py-5 text-lg font-medium placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all duration-300 outline-none" placeholder="e.g. Alex Chen" type="text"/>
+</div>
+</div>
+<!-- Chat Style Selection -->
+<div class="space-y-4">
+<label class="block text-[11px] font-bold uppercase tracking-[0.1em] text-on-surface-variant ml-1">Chat Style</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-3 rounded-full bg-primary-container text-on-primary-container font-medium transition-all duration-200 scale-98 active:scale-95" type="button">Casual &amp; Witty</button>
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Deep &amp; Meaningful</button>
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Short &amp; Sweet</button>
+</div>
+</div>
+<!-- Response Pace Selection -->
+<div class="space-y-4">
+<label class="block text-[11px] font-bold uppercase tracking-[0.1em] text-on-surface-variant ml-1">Response Pace</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Instant Reply</button>
+<button class="px-5 py-3 rounded-full bg-primary-container text-on-primary-container font-medium transition-all duration-200 scale-98 active:scale-95" type="button">Mindful Gaps</button>
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Batch Texter</button>
+</div>
+</div>
+<!-- Vibe Preference Selection -->
+<div class="space-y-4">
+<label class="block text-[11px] font-bold uppercase tracking-[0.1em] text-on-surface-variant ml-1">Vibe Preference</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Playful</button>
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Calm</button>
+<button class="px-5 py-3 rounded-full bg-primary-container text-on-primary-container font-medium transition-all duration-200 scale-98 active:scale-95" type="button">Energetic</button>
+<button class="px-5 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium hover:bg-slate-100 transition-all duration-200" type="button">Sincere</button>
+</div>
+</div>
+<!-- One Remark Textarea -->
+<div class="space-y-4">
+<label class="block text-[11px] font-bold uppercase tracking-[0.1em] text-on-surface-variant ml-1">One Remark</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low border-none rounded-lg px-6 py-5 text-lg font-medium placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all duration-300 outline-none resize-none" placeholder="Tell them one quirky thing about yourself..." rows="3"></textarea>
+</div>
+</div>
+</form>
+<!-- Decorative Illustration Card (Asymmetric) -->
+<div class="mt-8 bg-surface-container-lowest p-8 rounded-xl shadow-[0_24px_48px_rgba(42,52,57,0.06)] flex items-center gap-6 overflow-hidden relative">
+<div class="flex-1 space-y-2 relative z-10">
+<p class="text-xs font-bold text-primary tracking-widest uppercase">Sneak Peek</p>
+<p class="text-on-surface text-lg font-medium leading-tight">Your card will be soft, misty, and inviting.</p>
+</div>
+<div class="w-24 h-24 bg-primary-container/40 rounded-full blur-2xl absolute -right-4 -bottom-4"></div>
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 relative z-10 rotate-3">
+<img alt="Minimalist desk" class="w-full h-full object-cover" data-alt="Close-up of a minimalist clean ceramic vase with a single dried flower on a soft blue linen background in natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDnwgLL3v6Hr-nR9eCUUUxI1mM7uo95b8fCSzJiBBm4VRkUkGqnI3KmXErFh2EagzXmMUsrdWSYRjqPKvzcKExmWmis_NJQ1vQ8-Z3ufRHYj4eHAbLmTAkCxnFnfDN9t3Y0P60x13nYDtCvvfowzBEZKWNrxG5DRNQ9pT5xIl51mBfU-PmI8ygybt4RL0IJdC1HCZ1ONOlry2rBdC2RFPInzuLJ_KjDxdWgseEWkN0O4oVsjEQOe4E1VA_yothgKSDefgyWRoIjJs"/>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action & Navigation (Combined Shell Logic) -->
+<div class="fixed bottom-0 left-0 w-full z-50">
+<!-- Floating FAB Action (Suppressed for focused form, but CTA needed here per instructions) -->
+<div class="max-w-md mx-auto px-6 mb-24">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full text-lg font-semibold shadow-xl shadow-primary/20 hover:opacity-90 active:scale-95 transition-all duration-200">
+                Generate Icebreaker Card
+            </button>
+</div>
+<!-- Bottom Navigation Shell (JSON Defined) -->
+<nav class="bg-[#f7f9fb]/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_24px_rgba(42,52,57,0.04)] rounded-t-[3rem] w-full flex justify-around items-center px-8 pb-8 pt-4">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+</a>
+<!-- Active State: Since we are in the "Icebreaker Tool" (main action), Chat/Icebreaker is logically related -->
+<a class="flex flex-col items-center justify-center bg-[#cbe6ff] dark:bg-[#466178]/30 text-[#466178] dark:text-[#cbe6ff] rounded-full p-3 scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+</div>
+</body></html>

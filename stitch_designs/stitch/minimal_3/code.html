@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Result - Icebreaker Tool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#f4f8ff",
+              "tertiary-fixed-dim": "#c7d5ee",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#435e75",
+              "tertiary": "#526075",
+              "inverse-surface": "#0b0f10",
+              "on-tertiary-fixed-variant": "#4e5c71",
+              "on-tertiary-container": "#455367",
+              "surface-container": "#e8eff3",
+              "surface-bright": "#f7f9fb",
+              "surface-container-highest": "#d9e4ea",
+              "primary": "#466178",
+              "on-primary-container": "#39546b",
+              "on-secondary": "#f6f9ff",
+              "tertiary-fixed": "#d5e3fd",
+              "inverse-on-surface": "#9a9d9f",
+              "primary-dim": "#3a556b",
+              "surface-container-low": "#f0f4f7",
+              "outline": "#717c82",
+              "surface": "#f7f9fb",
+              "secondary": "#596066",
+              "secondary-fixed": "#dde3eb",
+              "error": "#9f403d",
+              "on-surface": "#2a3439",
+              "primary-container": "#cbe6ff",
+              "surface-dim": "#cfdce3",
+              "primary-fixed": "#cbe6ff",
+              "on-primary-fixed": "#264257",
+              "surface-container-high": "#e1e9ee",
+              "on-tertiary": "#f8f8ff",
+              "tertiary-container": "#d5e3fd",
+              "surface-tint": "#466178",
+              "on-secondary-fixed-variant": "#565c63",
+              "secondary-dim": "#4d545a",
+              "background": "#f7f9fb",
+              "primary-fixed-dim": "#bbd8f2",
+              "on-surface-variant": "#566166",
+              "error-container": "#fe8983",
+              "on-error-container": "#752121",
+              "on-background": "#2a3439",
+              "secondary-container": "#dde3eb",
+              "outline-variant": "#a9b4b9",
+              "tertiary-dim": "#465469",
+              "on-tertiary-fixed": "#324054",
+              "secondary-fixed-dim": "#cfd5dd",
+              "error-dim": "#4e0309",
+              "surface-variant": "#d9e4ea",
+              "on-secondary-fixed": "#3a4046",
+              "on-error": "#fff7f6",
+              "on-secondary-container": "#4c5259",
+              "inverse-primary": "#b9d5f0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .icebreaker-bubble {
+        border-radius: 3rem 3rem 3rem 0.5rem;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-slate-900 transition-colors">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-md mx-auto">
+<button class="text-[#466178] dark:text-[#cbe6ff] scale-95 active:scale-90 transition-transform duration-200 hover:opacity-80">
+<span class="material-symbols-outlined" data-icon="arrow_back_ios">arrow_back_ios</span>
+</button>
+<h1 class="font-manrope font-semibold text-[#466178] dark:text-[#cbe6ff] text-lg tracking-tight">Icebreaker</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="max-w-md mx-auto px-6 pt-8 pb-32">
+<!-- Main Editorial Card -->
+<section class="relative bg-surface-container-lowest rounded-xl shadow-[0_24px_48px_rgba(42,52,57,0.06)] overflow-hidden transition-all duration-300">
+<!-- Subtle Texture/Background Accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="p-10 space-y-12 relative z-10">
+<!-- Header: Name -->
+<header class="space-y-2">
+<span class="font-label text-xs uppercase tracking-[0.15em] text-outline">Social Identity</span>
+<h2 class="text-4xl font-headline font-semibold text-primary tracking-tight">Julian Chen</h2>
+</header>
+<!-- Editorial Sections -->
+<div class="space-y-10">
+<!-- Style -->
+<article class="space-y-3">
+<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary/60 border-b border-outline-variant/10 pb-2">Interaction Style</h3>
+<p class="text-xl font-body text-on-surface leading-relaxed">
+                            A thoughtful listener who prefers deep 1-on-1 conversations over crowded rooms. Communicates with gentle precision and shared curiosity.
+                        </p>
+</article>
+<!-- Pace -->
+<article class="space-y-3">
+<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary/60 border-b border-outline-variant/10 pb-2">Social Pace</h3>
+<p class="text-xl font-body text-on-surface leading-relaxed">
+                            Low-frequency but high-intensity connection. Values quality time that feels unhurried, like a slow walk through a gallery.
+                        </p>
+</article>
+<!-- Vibe -->
+<article class="space-y-3">
+<h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary/60 border-b border-outline-variant/10 pb-2">The Vibe</h3>
+<p class="text-xl font-body text-on-surface leading-relaxed">
+                            Understated elegance, a penchant for analog hobbies, and a quiet sense of humor that rewards the attentive observer.
+                        </p>
+</article>
+</div>
+<!-- Footer: Remark (Speech Bubble Style) -->
+<footer class="pt-6">
+<div class="icebreaker-bubble bg-primary-container/30 p-6">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-primary-container block mb-3">AI Remark</span>
+<p class="italic text-on-primary-container font-medium leading-snug">
+                            "Connecting with Julian feels like finding a quiet cafe in a bustling city—suddenly, everything else just fades out."
+                        </p>
+</div>
+</footer>
+</div>
+</section>
+<!-- Actions Cluster -->
+<nav class="mt-12 space-y-4">
+<button class="w-full py-5 bg-primary text-on-primary rounded-xl font-semibold tracking-wide flex items-center justify-center gap-3 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+<span>Save Image</span>
+</button>
+<div class="grid grid-cols-2 gap-4">
+<button class="py-4 bg-secondary-container text-on-secondary-container rounded-xl font-medium flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+<span>Edit</span>
+</button>
+<button class="py-4 bg-surface-container-high text-on-surface-variant rounded-xl font-medium flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="refresh">refresh</span>
+<span>Refresh</span>
+</button>
+</div>
+</nav>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-8 pt-4 bg-[#f7f9fb]/80 dark:bg-slate-900/80 backdrop-blur-md z-50 rounded-t-[3rem] shadow-[0_-4px_24px_rgba(42,52,57,0.04)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors scale-98 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors scale-98 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#cbe6ff] dark:bg-[#466178]/30 text-[#466178] dark:text-[#cbe6ff] rounded-full p-3 hover:opacity-80 transition-opacity scale-98 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+</body></html>

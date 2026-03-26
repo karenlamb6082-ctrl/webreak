@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>首页 - 破冰卡生成器 (v2)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#eff9ff",
+              "on-error-container": "#752121",
+              "tertiary-container": "#ecf5f9",
+              "tertiary-fixed-dim": "#dee7eb",
+              "on-error": "#fff7f6",
+              "primary-container": "#cbe7f5",
+              "on-primary-container": "#3c5561",
+              "surface-container-high": "#e1eaec",
+              "primary-dim": "#3c5662",
+              "primary": "#48626e",
+              "secondary-container": "#d7e5ec",
+              "surface-container-highest": "#d9e4e8",
+              "on-surface": "#2a3437",
+              "secondary-fixed": "#d7e5ec",
+              "error-container": "#fe8983",
+              "on-tertiary-fixed": "#424b4e",
+              "tertiary-dim": "#4c5458",
+              "error-dim": "#4e0309",
+              "on-secondary-fixed": "#344147",
+              "secondary": "#546167",
+              "on-background": "#2a3437",
+              "tertiary": "#586064",
+              "error": "#9f403d",
+              "inverse-on-surface": "#9a9d9e",
+              "primary-fixed": "#cbe7f5",
+              "on-secondary": "#f2faff",
+              "background": "#f8fafb",
+              "on-primary-fixed": "#29434e",
+              "surface-dim": "#cfdce0",
+              "on-tertiary": "#f1fafe",
+              "surface-tint": "#48626e",
+              "on-tertiary-container": "#545d61",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#bdd9e6",
+              "surface-variant": "#d9e4e8",
+              "inverse-surface": "#0b0f10",
+              "surface-container-low": "#f0f4f6",
+              "surface": "#f8fafb",
+              "on-secondary-fixed-variant": "#505e64",
+              "on-secondary-container": "#46545a",
+              "on-primary-fixed-variant": "#455f6b",
+              "on-surface-variant": "#566164",
+              "surface-bright": "#f8fafb",
+              "surface-container": "#e8eff1",
+              "outline": "#727d80",
+              "inverse-primary": "#ceeaf8",
+              "secondary-dim": "#48555b",
+              "on-tertiary-fixed-variant": "#5f686b",
+              "tertiary-fixed": "#ecf5f9",
+              "outline-variant": "#a9b4b7",
+              "secondary-fixed-dim": "#c9d7de"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+        .tonal-shift-bg { background-color: rgba(248, 250, 251, 0.7); }
+        body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #f8fafb; color: #2a3437; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl docked w-full top-0 z-50 flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100 font-headline tracking-tighter">Icebreaker</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-200">auto_awesome</span>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex flex-col items-center px-6 pt-12 pb-32 max-w-lg mx-auto text-center">
+<!-- Hero Section -->
+<header class="mb-12 space-y-4">
+<h1 class="text-3xl font-extrabold text-on-surface tracking-tight leading-tight">
+                给新朋友发一张破冰卡
+            </h1>
+<p class="text-on-surface-variant body-lg leading-[1.8] px-4">
+                用不到一分钟生成一张自然的自我介绍图
+            </p>
+</header>
+<!-- CTA Action -->
+<div class="w-full mb-16">
+<button class="w-full py-4 px-8 bg-gradient-to-br from-primary to-primary-dim text-on-primary font-headline font-semibold rounded-xl shadow-[0_12px_32px_-4px_rgba(42,52,55,0.1)] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2">
+<span>开始制作</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<!-- Single Elegant Preview Card -->
+<section class="w-full">
+<div class="relative group">
+<!-- Decorative background elements for "Misty Atmosphere" -->
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-primary-container/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-8 -right-8 w-40 h-40 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+<!-- The Icebreaker Card -->
+<div class="surface-container-lowest rounded-xl shadow-[0_12px_32px_-4px_rgba(42,52,55,0.06)] overflow-hidden text-left relative border border-white/50">
+<!-- Asymmetric Decorative Dot -->
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-primary-fixed-dim"></div>
+<div class="p-6 space-y-6">
+<!-- User Header -->
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container-high ring-4 ring-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a creative woman with a friendly expression, soft natural window lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg09L_UqvW3I--kVtXRac1vXRyRHsSLR3qmqWfRipZ7fX5w5Y55eBPcPEu6MdcIgNtYY9UVxmAdMF9-AeCs0uFB2l7dHmls5Tk0yKkSkQKY5Wm6TGFUMA5B1ZjhITM64L2p1s08GfxX38sfkvq8q70O3hMqzReogxqnfluMXervBCJdWOQHjK-CVKQwokKtwi5GQMdkHKa8ko_8KLh4oPIixozTUX8jMVRB3eIX1EE4sbhsXaC7ej5x7-ks-89mP-KlYabuQbdtSE"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface">林沐然 <span class="text-on-surface-variant font-normal text-sm ml-1">Muran</span></h3>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-wider uppercase">Product Designer</span>
+</div>
+</div>
+</div>
+<!-- Content Grid (Social Primitives) -->
+<div class="space-y-5">
+<div class="space-y-1.5">
+<label class="label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>目前在</span>
+</label>
+<p class="body-lg text-on-surface font-medium">杭州 · 西湖边的一家工作室</p>
+</div>
+<div class="space-y-1.5">
+<label class="label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">interests</span>
+<span>聊得来的话题</span>
+</label>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-sm rounded-lg"># 胶片摄影</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-sm rounded-lg"># 猫科动物</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-sm rounded-lg"># 数字游民</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-container/50">
+<p class="text-on-surface-variant text-sm italic leading-relaxed">
+                                    "比起社交，我更喜欢有温度的对话。如果你也喜欢观察生活中的细微之处，那我们一定会很有话题。"
+                                </p>
+</div>
+</div>
+</div>
+<!-- Card Footer Decor -->
+<div class="bg-surface-container-low/50 px-6 py-3 flex justify-between items-center">
+<span class="text-[10px] font-bold font-headline text-outline tracking-widest uppercase">Icebreaker Card v2</span>
+<div class="flex -space-x-1.5">
+<div class="w-5 h-5 rounded-full border-2 border-surface-container-lowest bg-primary-fixed-dim"></div>
+<div class="w-5 h-5 rounded-full border-2 border-surface-container-lowest bg-secondary-fixed-dim"></div>
+</div>
+</div>
+</div>
+<!-- Card Shadow/Depth indicator -->
+<div class="mt-8 flex justify-center">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+<span>样张：极简主义风格</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Shell (BottomNavBar) -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg rounded-t-2xl border-t border-slate-100/50 dark:border-slate-800/50 shadow-[0_-4px_20px_rgba(42,52,55,0.04)]">
+<!-- Active Item: Discover (Maps to Landing/Home intent) -->
+<a class="flex flex-col items-center justify-center text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-800 rounded-xl px-4 py-1 tap-highlight-none transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-plus-jakarta text-[11px] font-medium tracking-wide">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-slate-600 dark:hover:text-slate-300 tap-highlight-none transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">style</span>
+<span class="font-plus-jakarta text-[11px] font-medium tracking-wide">My Cards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-slate-600 dark:hover:text-slate-300 tap-highlight-none transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-plus-jakarta text-[11px] font-medium tracking-wide">Profile</span>
+</a>
+</div>
+</body></html>

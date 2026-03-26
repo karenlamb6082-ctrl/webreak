@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>结果页 - 破冰卡生成器</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#566166",
+              "surface-variant": "#d9e4ea",
+              "tertiary-dim": "#4d545a",
+              "tertiary-container": "#e0e6ee",
+              "tertiary-fixed-dim": "#d2d8e0",
+              "outline": "#717c82",
+              "on-secondary-fixed-variant": "#4e5d6f",
+              "error-container": "#fe8983",
+              "on-error-container": "#752121",
+              "on-primary": "#f3f8ff",
+              "secondary-fixed": "#d4e4fa",
+              "secondary-fixed-dim": "#c6d6ec",
+              "on-tertiary-container": "#4e545b",
+              "surface-container-lowest": "#ffffff",
+              "background": "#f7f9fb",
+              "primary-fixed": "#d3e4f6",
+              "on-surface": "#2a3439",
+              "secondary-container": "#d4e4fa",
+              "error": "#9f403d",
+              "on-secondary-container": "#445365",
+              "inverse-primary": "#dcedff",
+              "primary": "#50606f",
+              "inverse-on-surface": "#9a9d9f",
+              "on-tertiary-fixed-variant": "#585e65",
+              "surface-container-high": "#e1e9ee",
+              "secondary-dim": "#465467",
+              "outline-variant": "#a9b4b9",
+              "tertiary": "#596066",
+              "on-primary-container": "#435462",
+              "on-tertiary": "#f6f9ff",
+              "tertiary-fixed": "#e0e6ee",
+              "surface-container": "#e8eff3",
+              "surface": "#f7f9fb",
+              "error-dim": "#4e0309",
+              "on-tertiary-fixed": "#3b4248",
+              "surface-dim": "#cfdce3",
+              "surface-tint": "#50606f",
+              "secondary": "#526073",
+              "primary-dim": "#445463",
+              "surface-bright": "#f7f9fb",
+              "on-primary-fixed-variant": "#4d5d6c",
+              "on-secondary-fixed": "#324052",
+              "inverse-surface": "#0b0f10",
+              "surface-container-highest": "#d9e4ea",
+              "surface-container-low": "#f0f4f7",
+              "primary-container": "#d3e4f6",
+              "on-primary-fixed": "#31414f",
+              "on-error": "#fff7f6",
+              "primary-fixed-dim": "#c5d6e8",
+              "on-secondary": "#f7f9ff",
+              "on-background": "#2a3439"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "Noto Sans SC"],
+              "body": ["Manrope", "Noto Sans SC"],
+              "label": ["Manrope", "Noto Sans SC"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            font-family: 'Manrope', 'Noto Sans SC', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .misty-gradient {
+            background: linear-gradient(135deg, #f7f9fb 0%, #e8eff3 100%);
+        }
+        .poster-canvas {
+            aspect-ratio: 3 / 4;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar Shared Component -->
+<nav class="docked full-width top-0 z-50 bg-[#f7f9fb] dark:bg-slate-900 flex justify-between items-center w-full px-8 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#50606f] dark:text-[#b9cadb]">arrow_back</span>
+<span class="text-lg font-semibold text-[#50606f] dark:text-[#b9cadb]">Icebreakers</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-[#50606f] font-semibold font-['Manrope'] tracking-tight">结果页 - 破冰卡生成器</span>
+</div>
+<div class="w-10"></div> <!-- Spacer for centering effect -->
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen pt-24 pb-32 px-6 md:px-[8.5rem] flex flex-col items-center">
+<!-- The Icebreaker Poster Card -->
+<div class="poster-canvas w-full max-w-[420px] bg-surface-container-lowest rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden relative border border-white">
+<!-- Atmospheric Accent -->
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary-container/20 blur-[60px] rounded-full -mr-24 -mt-24"></div>
+<div class="absolute bottom-0 left-0 w-40 h-40 bg-secondary-container/10 blur-[50px] rounded-full -ml-20 -mb-20"></div>
+<!-- Poster Content Padding -->
+<div class="relative z-10 p-10 flex flex-col h-full">
+<!-- Header: Name/Nickname -->
+<header class="mb-12">
+<p class="text-[12px] tracking-[0.2em] text-outline font-medium mb-2">IDENTITY</p>
+<h1 class="text-3xl font-bold text-primary tracking-tight">林深见鹿</h1>
+<div class="w-8 h-[2px] bg-primary-container mt-4"></div>
+</header>
+<!-- Core Details Grid -->
+<div class="space-y-10 flex-grow">
+<!-- Section: Chat Style & Rhythm -->
+<div class="grid grid-cols-2 gap-8">
+<section>
+<label class="block text-[10px] tracking-widest text-outline-variant font-semibold mb-3 uppercase">Chat Style</label>
+<p class="text-on-surface-variant font-medium leading-relaxed">温和且慢热<br/><span class="text-sm font-normal text-outline">倾向于深度的文字交流</span></p>
+</section>
+<section>
+<label class="block text-[10px] tracking-widest text-outline-variant font-semibold mb-3 uppercase">Rhythm</label>
+<p class="text-on-surface-variant font-medium leading-relaxed">工作间隙回复<br/><span class="text-sm font-normal text-outline">不喜即时压力</span></p>
+</section>
+</div>
+<!-- Section: Vibe Preference -->
+<section>
+<label class="block text-[10px] tracking-widest text-outline-variant font-semibold mb-3 uppercase">Vibe Preference</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-surface-container-low text-primary text-xs rounded-full font-medium"># 独立游戏</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-primary text-xs rounded-full font-medium"># 城市漫步</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-primary text-xs rounded-full font-medium"># 极简主义</span>
+</div>
+</section>
+<!-- Section: The Note -->
+<section class="mt-auto pt-8 border-t border-surface-container-low">
+<label class="block text-[10px] tracking-widest text-outline-variant font-semibold mb-4 uppercase">The Note</label>
+<blockquote class="text-lg font-medium text-primary italic leading-snug">
+                            “比起快节奏的寒暄，我更期待在某个安静的时刻，听你聊聊最近读的一本书。”
+                        </blockquote>
+</section>
+</div>
+<!-- Footer: Branding -->
+<footer class="mt-12 flex justify-between items-end">
+<div class="text-[10px] text-outline-variant font-medium tracking-tighter">
+                        GENERATED BY ICEBREAKERS<br/>2024 AUTUMN COLLECTION
+                    </div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">qr_code_2</span>
+</div>
+</footer>
+</div>
+</div>
+<!-- Action Area -->
+<div class="mt-12 w-full max-w-[420px] flex flex-col items-center gap-6">
+<!-- Primary Action -->
+<button class="w-full py-4 bg-primary text-on-primary rounded-full font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">download</span>
+<span>保存图片</span>
+</button>
+<!-- Secondary Actions -->
+<div class="flex items-center gap-8">
+<button class="text-on-surface-variant text-sm font-medium flex items-center gap-1.5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+                    返回修改
+                </button>
+<div class="w-[1px] h-3 bg-surface-container-highest"></div>
+<button class="text-on-surface-variant text-sm font-medium flex items-center gap-1.5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+                    换一句备注
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shared Component -->
+<nav class="fixed bottom-6 left-0 right-0 mx-auto w-[92%] max-w-md z-50 flex justify-around items-center p-2 bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-xl rounded-[48px] shadow-[0_12px_40px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#566166] px-6 py-2 hover:text-[#50606f] transition-all cursor-pointer">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-['Manrope'] text-[12px] font-medium tracking-wide">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#50606f] text-white rounded-full px-6 py-2 cursor-pointer active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span class="font-['Manrope'] text-[12px] font-medium tracking-wide">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#566166] px-6 py-2 hover:text-[#50606f] transition-all cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[12px] font-medium tracking-wide">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Misty Editorial - WeChat Icebreaker Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#cad7d8",
+              "surface-variant": "#d9e4ec",
+              "on-primary": "#f3f8ff",
+              "tertiary": "#596064",
+              "primary-dim": "#3f5567",
+              "primary-container": "#cee5fb",
+              "on-secondary": "#eefbfc",
+              "tertiary-dim": "#4d5458",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d8e5e6",
+              "inverse-surface": "#0b0f11",
+              "on-primary-container": "#3e5466",
+              "secondary-fixed": "#d8e5e6",
+              "surface-dim": "#cedce5",
+              "error-container": "#fe8983",
+              "error": "#9f403d",
+              "surface-container-low": "#f0f4f8",
+              "error-dim": "#4e0309",
+              "secondary": "#556162",
+              "secondary-dim": "#495556",
+              "surface-container-high": "#e1e9f0",
+              "on-tertiary-fixed-variant": "#60676c",
+              "tertiary-fixed": "#eef5fa",
+              "on-tertiary-container": "#555d61",
+              "tertiary-fixed-dim": "#dfe6eb",
+              "surface-container-highest": "#d9e4ec",
+              "background": "#f7f9fc",
+              "inverse-primary": "#c8e0f6",
+              "on-secondary-container": "#475455",
+              "on-error": "#fff7f6",
+              "on-primary-fixed-variant": "#485e70",
+              "surface": "#f7f9fc",
+              "tertiary-container": "#eef5fa",
+              "on-background": "#29343a",
+              "surface-bright": "#f7f9fc",
+              "on-primary-fixed": "#2c4253",
+              "on-secondary-fixed-variant": "#515e5f",
+              "outline-variant": "#a8b3bb",
+              "on-error-container": "#752121",
+              "primary": "#4b6173",
+              "surface-tint": "#4b6173",
+              "on-secondary-fixed": "#354243",
+              "outline": "#717c84",
+              "on-tertiary": "#f3faff",
+              "primary-fixed-dim": "#c0d7ed",
+              "surface-container": "#e8eff4",
+              "primary-fixed": "#cee5fb",
+              "inverse-on-surface": "#9a9da0",
+              "on-surface": "#29343a",
+              "on-tertiary-fixed": "#434b4f",
+              "on-surface-variant": "#566168"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #f7f9fc;
+            color: #29343a;
+            -webkit-font-smoothing: antialiased;
+        }
+        .misty-gradient {
+            background: linear-gradient(180deg, rgba(247, 249, 252, 0) 0%, rgba(247, 249, 252, 1) 100%);
+        }
+        .icebreaker-card-shadow {
+            box-shadow: 0 20px 40px rgba(75, 97, 115, 0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9fc]/80 dark:bg-slate-900/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="font-['Manrope'] font-bold text-[#4b6173] dark:text-[#a3bacf] text-lg tracking-tight">The Misty Editorial</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest text-[#4b6173] dark:text-[#a3bacf] scale-110 transition-transform" href="#">Discover</a>
+<a class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest text-[#4b6173]/40 dark:text-slate-500 hover:text-[#4b6173] transition-opacity" href="#">Create</a>
+<a class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest text-[#4b6173]/40 dark:text-slate-500 hover:text-[#4b6173] transition-opacity" href="#">Library</a>
+</div>
+<button class="md:hidden p-2 text-primary active:scale-95 duration-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-6 max-w-screen-xl mx-auto min-h-screen">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center mb-16 space-y-6">
+<div class="inline-block py-1 px-4 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold tracking-[0.2em] uppercase mb-4">
+                Icebreaker / 破冰卡
+            </div>
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold text-on-background tracking-tight leading-[1.15]">
+                给新好友发一张<span class="text-primary">破冰卡</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed opacity-80">
+                不到一分钟，生成一张自然且有质感的自我介绍图。
+            </p>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:opacity-90 active:scale-95 transition-all duration-300 shadow-sm flex items-center gap-3">
+                    开始制作 / Create Now
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Featured Card Preview (Asymmetric Layout) -->
+<section class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32">
+<!-- Background Decorative Element -->
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary-container/20 rounded-full blur-[100px] -z-10"></div>
+<!-- The Hero Card -->
+<div class="lg:col-span-7 flex justify-center lg:justify-end">
+<div class="w-full max-w-[420px] bg-surface-container-lowest rounded-xl p-8 icebreaker-card-shadow relative overflow-hidden group">
+<!-- Card Top: Identity -->
+<div class="flex items-start justify-between mb-12">
+<div class="space-y-2">
+<h3 class="font-headline text-3xl font-bold text-on-background">阿岚 Alan</h3>
+<p class="font-body text-primary font-medium tracking-wide">产品设计师 / 摄影爱好者</p>
+</div>
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly young man with glasses smiling in soft natural outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8z8LaeBUw7LDj28jeFbW-it9CiVrq9eEIjUc_RWWvYBrEzJGekqnWz9Qx_uG2gmOkBWcGNb8mrfY4dpgc2I90yAb5_pHnq0wxQjg5xnHNf6QUwVcpBiGtn_QULN6jKNKOIWqY4sfwHTOJjIk2zMuN_0gAn2xwgs1tVMCb7H3GC-Q6uvHDhRaUetBl224Lj7F4MpnWSSOAZQsqB3MLnvgohXKK4l5PSvEr7A0ju5_xU9L31j5F-NE---eciFTzD3VQo3kWOFyAaAY"/>
+</div>
+</div>
+<!-- Card Body: Introduction -->
+<div class="space-y-8 mb-12">
+<div class="space-y-2">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Bio / 关于我</label>
+<p class="font-body text-on-surface leading-relaxed text-lg">
+                                正在探索城市中的“寂静角落”，喜欢在胶片中捕捉光影。最近的兴趣是研究北欧极简主义设计。
+                            </p>
+</div>
+<!-- Pill Tags -->
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium"># 极简主义</span>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium"># 咖啡深度玩家</span>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium"># 徒步旅行</span>
+</div>
+</div>
+<!-- Card Footer: Contact -->
+<div class="pt-8 border-t border-surface-container-high flex justify-between items-center">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Location</span>
+<span class="font-body text-sm font-semibold">Shanghai, CN</span>
+</div>
+<div class="p-3 bg-primary/5 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="qr_code_2">qr_code_2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Descriptive Text Content (Editorial Staircase Alignment) -->
+<div class="lg:col-span-5 space-y-12 lg:pl-12">
+<div class="space-y-4">
+<span class="text-primary font-headline font-bold text-5xl opacity-20 block">01</span>
+<h2 class="font-headline text-2xl font-bold text-on-background">定义你的第一印象</h2>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        跳过繁琐的文字排版。我们的算法会自动平衡色彩与留白，确保每一张卡片都散发着专业的审美。
+                    </p>
+</div>
+<div class="space-y-4 ml-8 md:ml-16">
+<span class="text-primary font-headline font-bold text-5xl opacity-20 block">02</span>
+<h2 class="font-headline text-2xl font-bold text-on-background">自然且高级</h2>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        采用低饱和度的 Misty Blue 色调，在忙碌的社交媒体流中创造一片安静的视觉绿洲。
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Section: Features -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="palette">palette</span>
+<h3 class="font-headline text-2xl font-bold mb-4">多种艺术模板</h3>
+<p class="font-body text-on-surface-variant max-w-md">从沉稳的职场风到轻盈的个人风，每一套模板都经过精心微调。</p>
+</div>
+<div class="flex -space-x-4 mt-8">
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-primary-container"></div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-secondary-container"></div>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-tertiary-container"></div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="share">share</span>
+<h3 class="font-headline text-2xl font-bold mb-4">即刻分享</h3>
+<p class="font-body text-on-surface-variant">一键保存高清图片，完美适配微信朋友圈与私聊。</p>
+</div>
+<div class="flex justify-end">
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm rotate-12">
+<span class="material-symbols-outlined text-on-background" data-icon="image">image</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#f7f9fc]/90 dark:bg-slate-950/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(75,97,115,0.05)] flex justify-around items-center px-8 pt-4 pb-8 rounded-t-[3rem]">
+<button class="flex flex-col items-center gap-1 text-[#4b6173] dark:text-[#a3bacf] scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest">Discover</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4b6173]/40 dark:text-slate-500 hover:text-[#4b6173] transition-all">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest">Create</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4b6173]/40 dark:text-slate-500 hover:text-[#4b6173] transition-all">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-medium uppercase tracking-widest">Library</span>
+</button>
+</footer>
+<!-- Desktop Footer & Branding -->
+<footer class="hidden md:block py-12 border-t border-surface-container-low px-6">
+<div class="max-w-screen-xl mx-auto flex justify-between items-center">
+<div class="space-y-2">
+<span class="font-headline font-bold text-on-background">Icebreaker / 破冰卡</span>
+<p class="text-xs text-outline font-label uppercase tracking-widest">© 2024 The Misty Editorial Project</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-xs font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

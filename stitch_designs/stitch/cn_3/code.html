@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WeBreak 破冰卡生成器 - 结果页</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#d9e4ea",
+              "on-secondary-fixed-variant": "#565c63",
+              "primary": "#466178",
+              "on-primary-fixed-variant": "#435e75",
+              "surface-container-low": "#f0f4f7",
+              "on-background": "#2a3439",
+              "on-surface": "#2a3439",
+              "outline-variant": "#a9b4b9",
+              "on-primary-fixed": "#264257",
+              "on-primary": "#f4f8ff",
+              "primary-fixed": "#cbe6ff",
+              "surface-dim": "#cfdce3",
+              "surface-variant": "#d9e4ea",
+              "error-container": "#fe8983",
+              "surface-container-high": "#e1e9ee",
+              "on-primary-container": "#39546b",
+              "on-error": "#fff7f6",
+              "surface-container": "#e8eff3",
+              "tertiary-fixed-dim": "#c7d5ee",
+              "secondary-fixed": "#dde3eb",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#566166",
+              "on-secondary-fixed": "#3a4046",
+              "secondary-container": "#dde3eb",
+              "primary-dim": "#3a556b",
+              "tertiary-fixed": "#d5e3fd",
+              "background": "#f7f9fb",
+              "primary-fixed-dim": "#bbd8f2",
+              "on-tertiary-container": "#455367",
+              "surface-tint": "#466178",
+              "tertiary": "#526075",
+              "outline": "#717c82",
+              "secondary": "#596066",
+              "tertiary-container": "#d5e3fd",
+              "secondary-dim": "#4d545a",
+              "inverse-surface": "#0b0f10",
+              "error": "#9f403d",
+              "error-dim": "#4e0309",
+              "on-tertiary-fixed-variant": "#4e5c71",
+              "on-secondary": "#f6f9ff",
+              "secondary-fixed-dim": "#cfd5dd",
+              "on-error-container": "#752121",
+              "surface": "#f7f9fb",
+              "primary-container": "#cbe6ff",
+              "tertiary-dim": "#465469",
+              "on-tertiary-fixed": "#324054",
+              "on-secondary-container": "#4c5259",
+              "inverse-primary": "#b9d5f0",
+              "inverse-on-surface": "#9a9d9f",
+              "on-tertiary": "#f8f8ff",
+              "surface-bright": "#f7f9fb"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .poster-grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .icebreaker-bubble {
+            border-radius: 3rem 3rem 3rem 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(203, 230, 255, 0.1) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fb]/80 backdrop-blur-md shadow-sm shadow-[#2a3439]/5 flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#466178]" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-[#466178] font-bold tracking-tighter font-['Manrope'] font-semibold tracking-tight text-lg">WeBreak 破冰</h1>
+</div>
+<div class="flex gap-4">
+<button class="text-[#466178]/60 hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 pt-24 pb-32 px-6 max-w-lg mx-auto w-full">
+<!-- Icebreaker Poster Card -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/5 blur-3xl -z-10 rounded-full scale-90"></div>
+<section class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden relative border border-outline-variant/5">
+<div class="poster-grain absolute inset-0"></div>
+<!-- Poster Header (Editorial Style) -->
+<div class="px-8 pt-10 pb-6 border-b border-outline-variant/10 flex justify-between items-end">
+<div>
+<p class="text-[10px] font-label font-bold tracking-[0.2em] text-primary/40 uppercase mb-1">Icebreaker Profile</p>
+<h2 class="text-3xl font-headline font-semibold text-on-surface tracking-tight">林深见鹿</h2>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-primary/20 text-4xl" data-icon="blur_on">blur_on</span>
+</div>
+</div>
+<!-- Poster Body -->
+<div class="p-8 space-y-10">
+<!-- Style & Preference Section -->
+<div class="grid grid-cols-2 gap-8">
+<div>
+<label class="text-[10px] font-label font-bold tracking-widest text-primary/40 uppercase block mb-4">聊天风格</label>
+<p class="text-primary font-medium leading-relaxed">温和且慢热<br/>偏好深度探讨</p>
+</div>
+<div>
+<label class="text-[10px] font-label font-bold tracking-widest text-primary/40 uppercase block mb-4">相处偏好</label>
+<p class="text-primary font-medium leading-relaxed">尊重边界感<br/>有效沟通为主</p>
+</div>
+</div>
+<!-- Highlight Quote (The Icebreaker Bubble) -->
+<div class="icebreaker-bubble p-8 border border-primary/5">
+<span class="material-symbols-outlined text-primary/30 block mb-4" data-icon="format_quote">format_quote</span>
+<p class="text-xl font-headline font-medium leading-relaxed text-on-primary-container italic">
+                            “与其在人群中寻找共鸣，不如在一对一的深度对话中，构建一个小而美的宇宙。”
+                        </p>
+</div>
+<!-- Visual Decorations -->
+<div class="flex justify-between items-center opacity-40">
+<div class="flex gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+<div class="w-4 h-1.5 rounded-full bg-primary-container"></div>
+</div>
+<p class="text-[10px] font-label font-bold tracking-widest text-primary/60">DESIGNED BY WEBREAK</p>
+</div>
+</div>
+<!-- Bottom Aesthetic Stripe -->
+<div class="h-2 bg-gradient-to-r from-primary-container via-surface-container-high to-primary/20"></div>
+</section>
+</div>
+<!-- Action Area -->
+<div class="mt-12 space-y-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-bold tracking-wide active:scale-[0.98] transition-all flex items-center justify-center gap-3 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+                保存破冰卡片到相册
+            </button>
+<div class="grid grid-cols-2 gap-4">
+<button class="bg-surface-container-low text-primary py-4 rounded-xl font-semibold active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+                    返回修改
+                </button>
+<button class="bg-surface-container-low text-primary py-4 rounded-xl font-semibold active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="refresh">refresh</span>
+                    换一句备注
+                </button>
+</div>
+</div>
+</main>
+<!-- Navigation Suppressed for transactional/result screen focus -->
+<!-- Toast Notification Simulation (Subtle Hint) -->
+<div class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-on-background/90 text-surface-container-lowest px-6 py-3 rounded-full text-sm font-medium backdrop-blur-md opacity-0 pointer-events-none">
+        卡片已保存至相册
+    </div>
+</body></html>

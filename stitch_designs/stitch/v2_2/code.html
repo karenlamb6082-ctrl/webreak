@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>生成页 - 破冰卡生成器 (v2)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#eff9ff",
+              "on-error-container": "#752121",
+              "tertiary-container": "#ecf5f9",
+              "tertiary-fixed-dim": "#dee7eb",
+              "on-error": "#fff7f6",
+              "primary-container": "#cbe7f5",
+              "on-primary-container": "#3c5561",
+              "surface-container-high": "#e1eaec",
+              "primary-dim": "#3c5662",
+              "primary": "#48626e",
+              "secondary-container": "#d7e5ec",
+              "surface-container-highest": "#d9e4e8",
+              "on-surface": "#2a3437",
+              "secondary-fixed": "#d7e5ec",
+              "error-container": "#fe8983",
+              "on-tertiary-fixed": "#424b4e",
+              "tertiary-dim": "#4c5458",
+              "error-dim": "#4e0309",
+              "on-secondary-fixed": "#344147",
+              "secondary": "#546167",
+              "on-background": "#2a3437",
+              "tertiary": "#586064",
+              "error": "#9f403d",
+              "inverse-on-surface": "#9a9d9e",
+              "primary-fixed": "#cbe7f5",
+              "on-secondary": "#f2faff",
+              "background": "#f8fafb",
+              "on-primary-fixed": "#29434e",
+              "surface-dim": "#cfdce0",
+              "on-tertiary": "#f1fafe",
+              "surface-tint": "#48626e",
+              "on-tertiary-container": "#545d61",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#bdd9e6",
+              "surface-variant": "#d9e4e8",
+              "inverse-surface": "#0b0f10",
+              "surface-container-low": "#f0f4f6",
+              "surface": "#f8fafb",
+              "on-secondary-fixed-variant": "#505e64",
+              "on-secondary-container": "#46545a",
+              "on-primary-fixed-variant": "#455f6b",
+              "on-surface-variant": "#566164",
+              "surface-bright": "#f8fafb",
+              "surface-container": "#e8eff1",
+              "outline": "#727d80",
+              "inverse-primary": "#ceeaf8",
+              "secondary-dim": "#48555b",
+              "on-tertiary-fixed-variant": "#5f686b",
+              "tertiary-fixed": "#ecf5f9",
+              "outline-variant": "#a9b4b7",
+              "secondary-fixed-dim": "#c9d7de"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f8fafb;
+            color: #2a3437;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom background for the generation button using Design System Gradient */
+        .btn-primary-gradient {
+            background: linear-gradient(135deg, #48626e 0%, #3c5662 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col">
+<!-- Top Navigation Anchor (Manual Suppression of Global Nav for Task Focus) -->
+<header class="sticky top-0 z-50 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<button class="flex items-center justify-center p-2 rounded-full hover:opacity-80 transition-opacity active:transition-all scale-95 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline text-lg font-semibold tracking-tight text-slate-700 dark:text-slate-200">Icebreaker</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-grow px-6 pt-8 pb-32 max-w-2xl mx-auto w-full">
+<!-- Editorial Header Section -->
+<header class="mb-10">
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight leading-tight mb-2">生成页 - 破冰卡生成器 (v2)</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg opacity-80">在这里定义你的社交边界，让对话更自然地开始。</p>
+</header>
+<!-- Form Container -->
+<div class="space-y-12">
+<!-- Name Input Section -->
+<section>
+<label class="block font-headline text-sm font-bold tracking-wider text-on-surface-variant uppercase mb-4">别人怎么称呼你</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-b border-outline-variant/20 focus:border-primary px-4 py-4 text-xl outline-none transition-all placeholder:text-outline-variant/40 rounded-t-lg" placeholder="输入你的昵称..." type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-focus-within:w-full"></div>
+</div>
+</section>
+<!-- MBTI Selection (Horizontal Grouping) -->
+<section>
+<label class="block font-headline text-sm font-bold tracking-wider text-on-surface-variant uppercase mb-4">MBTI 类型</label>
+<div class="flex gap-2 overflow-x-auto pb-4 hide-scrollbar snap-x">
+<!-- Tab Category: Introverts -->
+<div class="flex-shrink-0 flex gap-2">
+<div class="bg-surface-container px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-primary">
+<span class="text-primary font-bold">INTJ</span>
+<span class="text-[10px] text-on-surface-variant">建筑师</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">INFP</span>
+<span class="text-[10px] text-on-surface-variant/60">调解员</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">ISTJ</span>
+<span class="text-[10px] text-on-surface-variant/60">物流师</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">ISFP</span>
+<span class="text-[10px] text-on-surface-variant/60">探险家</span>
+</div>
+</div>
+<!-- Separator -->
+<div class="w-px h-10 bg-outline-variant/20 self-center mx-2"></div>
+<!-- Tab Category: Extroverts -->
+<div class="flex-shrink-0 flex gap-2">
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">ENFP</span>
+<span class="text-[10px] text-on-surface-variant/60">竞选者</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">ENTP</span>
+<span class="text-[10px] text-on-surface-variant/60">辩论家</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">ESTJ</span>
+<span class="text-[10px] text-on-surface-variant/60">总经理</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex flex-col items-center justify-center min-w-[80px] snap-start border-2 border-transparent">
+<span class="text-on-surface-variant font-medium">ESFJ</span>
+<span class="text-[10px] text-on-surface-variant/60">执政官</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Selection Categories -->
+<div class="grid grid-cols-1 gap-10">
+<!-- 聊天风格 -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<label class="font-headline text-sm font-bold tracking-wider text-on-surface-variant uppercase">聊天风格</label>
+<span class="text-[10px] text-outline">多选</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium border border-transparent">慢热细腻</span>
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">直球出击</span>
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">表情包大户</span>
+<span class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium border border-transparent">深度探讨</span>
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">冷笑话制造机</span>
+</div>
+</section>
+<!-- 回复节奏 -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<label class="font-headline text-sm font-bold tracking-wider text-on-surface-variant uppercase">回复节奏</label>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">秒回星人</span>
+<span class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium border border-transparent">随缘意念回复</span>
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">固定时段上线</span>
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">长篇大论型</span>
+</div>
+</section>
+<!-- 相处偏好 -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<label class="font-headline text-sm font-bold tracking-wider text-on-surface-variant uppercase">相处偏好</label>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">保持边界</span>
+<span class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium border border-transparent">互不打扰</span>
+<span class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium border border-transparent">随时可约</span>
+<span class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant text-sm font-medium">共同进步</span>
+</div>
+</section>
+</div>
+<!-- Remark Input Area -->
+<section>
+<label class="block font-headline text-sm font-bold tracking-wider text-on-surface-variant uppercase mb-4">一句备注</label>
+<div class="bg-surface-container-low rounded-xl p-4 min-h-[120px] flex flex-col border-b border-outline-variant/20">
+<textarea class="bg-transparent border-none focus:ring-0 w-full resize-none text-on-surface leading-relaxed text-base flex-grow" placeholder="例如：最近在读《存在与时间》，欢迎交流..." rows="3"></textarea>
+<div class="flex justify-end mt-2">
+<span class="text-[10px] text-outline-variant font-headline">0 / 40</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Fixed Bottom Footer for Primary Action -->
+<footer class="fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-md px-6 pb-10 pt-4 z-40">
+<div class="max-w-2xl mx-auto">
+<button class="w-full btn-primary-gradient text-on-primary py-4 rounded-xl font-headline font-bold text-lg shadow-[0_12px_32px_-4px_rgba(42,52,55,0.12)] active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">auto_awesome</span>
+                生成破冰卡
+            </button>
+</div>
+</footer>
+<!-- Bottom Navigation Shell Suppression (As per task focus on Creation Page) -->
+</body></html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>WeBreak 破冰 - 给新好友发一张破冰卡</title>
+  <meta name="description" content="用不到一分钟生成一张自然的自我介绍图，让微信新好友快速了解你。" />
+  <meta name="theme-color" content="#f7f9fb" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <!-- 样式 -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="app">
+  <!-- ========== 顶部导航栏 ========== -->
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__brand">
+      <div class="top-bar__logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="9" r="4" fill="#3d637e" opacity="0.7"/>
+          <circle cx="15" cy="15" r="4" fill="#3d637e" opacity="0.4"/>
+          <circle cx="15" cy="9" r="4" fill="#b3d9f9"/>
+        </svg>
+      </div>
+      <span class="top-bar__title">WeBreak 破冰</span>
+    </div>
+    <button class="top-bar__action" id="topBarAction" aria-label="分享">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </header>
+
+  <!-- ========== 首页 ========== -->
+  <main class="page home-page active" id="pageHome">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero__title">给新好友发一张<span>破冰卡</span></h1>
+      <p class="hero__subtitle">用不到一分钟生成一张自然的自我介绍图<br/>让新好友快速了解你</p>
+      <button class="hero__cta" id="btnStartCreate">开始制作</button>
+    </section>
+
+    <!-- 示例卡片 -->
+    <section class="preview-section">
+      <div style="text-align:center; margin-bottom: var(--space-4);">
+        <span class="preview-label">
+          <span class="material-symbols-outlined" style="font-size: 1rem;">auto_awesome</span>
+          预览示例
+        </span>
+      </div>
+      <div class="preview-card">
+        <div class="preview-card__header">
+          <div class="preview-card__avatar">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg, #b3d9f9, #3d637e);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.125rem;">A</div>
+          </div>
+          <div class="preview-card__name-group">
+            <div class="preview-card__name">你好，我是 Alex</div>
+            <div class="preview-card__name-sub">HI, I'M ALEX</div>
+          </div>
+        </div>
+        <p class="preview-card__intro">
+          喜欢<span class="highlight">摄影</span>和<span class="highlight">城市漫步</span>。
+        </p>
+        <p class="preview-card__desc">
+          正在探索上海街头有趣的小店，<br/>希望能和你开启一段有趣的对话。
+        </p>
+        <div class="preview-card__tags">
+          <span class="tag">📸 徕卡玩家</span>
+          <span class="tag">☕ 每天三杯咖啡</span>
+          <span class="tag">🚶 弄堂漫游者</span>
+        </div>
+        <div class="preview-card__footer">
+          <span class="preview-card__footer-text">SCAN TO CONNECT</span>
+          <span class="preview-card__footer-text">CREATED VIA WEBREAK</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特点介绍 -->
+    <section class="features">
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <span class="material-symbols-outlined">edit_note</span>
+        </div>
+        <div class="feature-item__content">
+          <h3 class="feature-item__title">极简录入</h3>
+          <p class="feature-item__desc">无需撰写长文，只需选择几个标签，破冰卡就自动生成。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <span class="material-symbols-outlined">palette</span>
+        </div>
+        <div class="feature-item__content">
+          <h3 class="feature-item__title">杂志排版</h3>
+          <p class="feature-item__desc">自动适配视觉美感，每一张卡片都像杂志封面般精致。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <span class="material-symbols-outlined">bolt</span>
+        </div>
+        <div class="feature-item__content">
+          <h3 class="feature-item__title">快速分享</h3>
+          <p class="feature-item__desc">一键保存为高画质图片，完美适配朋友圈与对话框。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 编辑表单页 ========== -->
+  <main class="page edit-page" id="pageEdit">
+    <div class="edit-page__header">
+      <h2 class="edit-page__title">建立你的第一印象</h2>
+      <p class="edit-page__subtitle">通过几个简单的偏好，让初次聊天不再尴尬。你的破冰卡片将以最优雅的方式呈现。</p>
+    </div>
+
+    <!-- 01 昵称 -->
+    <div class="form-section">
+      <div class="form-section__number">01 身份</div>
+      <div class="form-section__label">别人怎么称呼你</div>
+      <input type="text" class="input-field" id="inputName" placeholder="例如：阿乐、小王..." maxlength="20" />
+    </div>
+
+    <!-- 02 聊天风格 -->
+    <div class="form-section">
+      <div class="form-section__number">02 沟通</div>
+      <div class="form-section__label">聊天风格</div>
+      <div class="chip-group" id="chipChatStyle" data-type="multi">
+        <button class="chip" data-value="随缘">🎲 随缘</button>
+        <button class="chip" data-value="话痨">🗣️ 话痨</button>
+        <button class="chip" data-value="言简意赅">✏️ 言简意赅</button>
+        <button class="chip" data-value="表情包大户">😂 表情包大户</button>
+        <button class="chip" data-value="深夜话题王">🌙 深夜话题王</button>
+        <button class="chip" data-value="冷幽默">🧊 冷幽默</button>
+        <button class="chip" data-value="暖心型">☀️ 暖心型</button>
+      </div>
+      <input type="text" class="input-field input-field--small" id="inputChatStyleCustom" placeholder="✍️ 自定义你的风格..." maxlength="10" />
+    </div>
+
+    <!-- 03 回复节奏 -->
+    <div class="form-section">
+      <div class="form-section__number">03 速度</div>
+      <div class="form-section__label">回复节奏</div>
+      <div class="chip-group" id="chipReplySpeed" data-type="single">
+        <button class="chip" data-value="秒回">⚡ 秒回</button>
+        <button class="chip" data-value="忙完回">📋 忙完回</button>
+        <button class="chip" data-value="意念回复">🧘 意念回复</button>
+        <button class="chip" data-value="看心情">🎭 看心情</button>
+        <button class="chip" data-value="佛系回">🍃 佛系回</button>
+        <button class="chip" data-value="语音轰炸">🎙️ 语音轰炸</button>
+      </div>
+      <input type="text" class="input-field input-field--small" id="inputReplySpeedCustom" placeholder="✍️ 自定义你的节奏..." maxlength="10" />
+    </div>
+
+    <!-- 04 相处偏好 -->
+    <div class="form-section">
+      <div class="form-section__number">04 偏好</div>
+      <div class="form-section__label">相处偏好</div>
+      <div class="chip-group" id="chipPreference" data-type="multi">
+        <button class="chip" data-value="自来熟">🤝 自来熟</button>
+        <button class="chip" data-value="慢热">🐢 慢热</button>
+        <button class="chip" data-value="保持边界">🛡️ 保持边界</button>
+        <button class="chip" data-value="直球型">🎯 直球型</button>
+      </div>
+    </div>
+
+    <!-- 05 MBTI -->
+    <div class="form-section">
+      <div class="form-section__number">05 个性</div>
+      <div class="form-section__label">MBTI 类型</div>
+      <button class="mbti-trigger" id="mbtiTrigger" type="button">
+        <span class="mbti-trigger__text" id="mbtiTriggerText">选择你的 MBTI</span>
+        <span class="material-symbols-outlined mbti-trigger__arrow">expand_more</span>
+      </button>
+    </div>
+
+    <!-- 折叠区：更多关于我（选填） -->
+    <div class="form-collapse" id="formCollapse">
+      <button class="form-collapse__trigger" id="collapseTrigger" type="button">
+        <div class="form-collapse__trigger-text">
+          <span class="form-collapse__title">更多关于我（选填）</span>
+          <span class="form-collapse__subtitle">添加兴趣爱好、工作身份等信息</span>
+        </div>
+        <span class="material-symbols-outlined form-collapse__arrow" id="collapseArrow">expand_more</span>
+      </button>
+      <div class="form-collapse__content" id="collapseContent">
+
+        <!-- 兴趣爱好 -->
+        <div class="form-section form-section--collapsed">
+          <div class="form-section__label">🎯 兴趣爱好<span class="form-section__hint">最多选 3 个</span></div>
+          <div class="chip-group" id="chipInterests" data-type="multi" data-max="3">
+            <button class="chip" data-value="摄影">📷 摄影</button>
+            <button class="chip" data-value="羽毛球">🏸 羽毛球</button>
+            <button class="chip" data-value="跑步">🏃 跑步</button>
+            <button class="chip" data-value="看展">🎨 看展</button>
+            <button class="chip" data-value="旅行">✈️ 旅行</button>
+            <button class="chip" data-value="咖啡">☕ 咖啡</button>
+            <button class="chip" data-value="电影">🎬 电影</button>
+            <button class="chip" data-value="音乐">🎵 音乐</button>
+            <button class="chip" data-value="动漫">🎌 动漫</button>
+            <button class="chip" data-value="撸猫撸狗">🐱 撸猫撸狗</button>
+            <button class="chip" data-value="做饭">🍳 做饭</button>
+            <button class="chip" data-value="阅读">📚 阅读</button>
+            <button class="chip" data-value="健身">💪 健身</button>
+            <button class="chip" data-value="游戏">🎮 游戏</button>
+            <button class="chip" data-value="骑行">🚴 骑行</button>
+            <button class="chip" data-value="画画">🎨 画画</button>
+          </div>
+          <input type="text" class="input-field input-field--small" id="inputInterestsCustom" placeholder="✍️ 自定义兴趣..." maxlength="10" />
+        </div>
+
+        <!-- 工作/身份 -->
+        <div class="form-section form-section--collapsed">
+          <div class="form-section__label">💼 工作 / 身份</div>
+          <div class="chip-group" id="chipJob" data-type="single">
+            <button class="chip" data-value="学生">📖 学生</button>
+            <button class="chip" data-value="设计">🎨 设计</button>
+            <button class="chip" data-value="产品">📱 产品</button>
+            <button class="chip" data-value="写代码">💻 写代码</button>
+            <button class="chip" data-value="自由职业">🌊 自由职业</button>
+            <button class="chip" data-value="创业中">🚀 创业中</button>
+            <button class="chip" data-value="内容相关">✍️ 内容相关</button>
+            <button class="chip" data-value="营销运营">📊 营销运营</button>
+            <button class="chip" data-value="读研中">🎓 读研中</button>
+            <button class="chip" data-value="还在找方向">🧭 还在找方向</button>
+          </div>
+          <input type="text" class="input-field input-field--small" id="inputJobCustom" placeholder="✍️ 自定义身份..." maxlength="10" />
+        </div>
+
+        <!-- 喜欢吃什么 -->
+        <div class="form-section form-section--collapsed">
+          <div class="form-section__label">🍜 喜欢吃什么<span class="form-section__hint">最多选 3 个</span></div>
+          <div class="chip-group" id="chipFood" data-type="multi" data-max="3">
+            <button class="chip" data-value="火锅">🫕 火锅</button>
+            <button class="chip" data-value="日料">🍣 日料</button>
+            <button class="chip" data-value="咖啡">☕ 咖啡</button>
+            <button class="chip" data-value="奶茶">🧋 奶茶</button>
+            <button class="chip" data-value="面食">🍜 面食</button>
+            <button class="chip" data-value="烧烤">🍖 烧烤</button>
+            <button class="chip" data-value="甜品">🍰 甜品</button>
+            <button class="chip" data-value="湘菜">🌶️ 湘菜</button>
+            <button class="chip" data-value="川菜">🔥 川菜</button>
+            <button class="chip" data-value="小龙虾">🦞 小龙虾</button>
+            <button class="chip" data-value="Brunch">🥞 Brunch</button>
+          </div>
+          <input type="text" class="input-field input-field--small" id="inputFoodCustom" placeholder="✍️ 自定义美食..." maxlength="10" />
+        </div>
+
+        <!-- 城市 -->
+        <div class="form-section form-section--collapsed">
+          <div class="form-section__label">📍 城市</div>
+          <div class="chip-group" id="chipCity" data-type="single">
+            <button class="chip" data-value="上海">上海</button>
+            <button class="chip" data-value="北京">北京</button>
+            <button class="chip" data-value="深圳">深圳</button>
+            <button class="chip" data-value="杭州">杭州</button>
+            <button class="chip" data-value="广州">广州</button>
+            <button class="chip" data-value="成都">成都</button>
+            <button class="chip" data-value="武汉">武汉</button>
+            <button class="chip" data-value="西安">西安</button>
+            <button class="chip" data-value="南京">南京</button>
+            <button class="chip" data-value="重庆">重庆</button>
+          </div>
+          <input type="text" class="input-field input-field--small" id="inputCityCustom" placeholder="✍️ 自定义城市..." maxlength="10" />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 06 备注 -->
+    <div class="form-section" style="margin-bottom: 8rem;">
+      <div class="form-section__number">06 备注</div>
+      <div class="form-section__label">一句备注</div>
+      <textarea class="textarea-field" id="inputNote" placeholder="给对方的一句话，或者你的特别属性..." maxlength="100"></textarea>
+    </div>
+
+    <!-- 生成按钮 -->
+    <div class="generate-btn-wrapper" id="generateBtnWrapper">
+      <button class="generate-btn" id="btnGenerate">
+        生成破冰卡
+        <span class="material-symbols-outlined">auto_awesome</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- ========== 预览结果页 ========== -->
+  <main class="page preview-page" id="pagePreview">
+    <!-- 生成的卡片（可截图区域） -->
+    <div class="result-card" id="resultCard">
+      <!-- 顶部渐变区域 -->
+      <div class="result-card__hero">
+        <div class="result-card__hero-bg"></div>
+        <div class="result-card__hero-content">
+          <div class="result-card__greeting">你好，我是</div>
+          <div class="result-card__name" id="resultName">Barley</div>
+          <div class="result-card__mbti" id="resultMbti" style="display:none;">ENTP · 辩论家</div>
+        </div>
+      </div>
+
+      <!-- 中段信息区 -->
+      <div class="result-card__body">
+        <!-- 风格标签 -->
+        <div class="result-card__info-row">
+          <div class="result-card__info-item">
+            <span class="result-card__info-icon">💬</span>
+            <div>
+              <div class="result-card__info-label">聊天风格</div>
+              <div class="result-card__info-value" id="resultChatStyle">热情健谈</div>
+            </div>
+          </div>
+          <div class="result-card__info-item">
+            <span class="result-card__info-icon">⏱️</span>
+            <div>
+              <div class="result-card__info-label">回复节奏</div>
+              <div class="result-card__info-value" id="resultReplySpeed">秒回</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card__info-row">
+          <div class="result-card__info-item result-card__info-item--full">
+            <span class="result-card__info-icon">🤝</span>
+            <div>
+              <div class="result-card__info-label">相处偏好</div>
+              <div class="result-card__info-value" id="resultPreference">自来熟型</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 标签区：也可以聊这些 -->
+        <div class="result-card__tags" id="resultTags" style="display:none;">
+          <div class="result-card__tags-list" id="resultTagsList">
+          </div>
+        </div>
+
+        <!-- 引语 -->
+        <div class="result-card__quote">
+          <p class="result-card__quote-text" id="resultQuote">"与其在人群中寻找共鸣，不如在一对一的深度对话中，构建一个小而美的宇宙。"</p>
+        </div>
+      </div>
+
+      <!-- 底部品牌 -->
+      <div class="result-card__brand">
+        <span class="result-card__brand-line"></span>
+        <span class="result-card__brand-text">WEBREAK · 破冰</span>
+        <span class="result-card__brand-line"></span>
+      </div>
+    </div>
+
+    <!-- 操作按钮 -->
+    <div class="preview-actions">
+      <button class="btn-primary-large" id="btnSave">
+        <span class="material-symbols-outlined">download</span>
+        保存破冰卡片到相册
+      </button>
+      <div class="preview-actions__row">
+        <button class="btn-secondary" id="btnBackEdit">
+          <span class="material-symbols-outlined" style="font-size:1.125rem;">edit</span>
+          返回修改
+        </button>
+        <button class="btn-secondary" id="btnRefreshQuote">
+          <span class="material-symbols-outlined" style="font-size:1.125rem;">refresh</span>
+          换一句备注
+        </button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- ========== MBTI 底部弹窗 ========== -->
+  <div class="sheet-overlay" id="mbtiOverlay"></div>
+  <div class="sheet" id="mbtiSheet">
+    <div class="sheet__handle"></div>
+    <div class="sheet__header">
+      <h3 class="sheet__title">选择你的 MBTI</h3>
+      <button class="sheet__close" id="mbtiSheetClose">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="sheet__body">
+      <div class="sheet__mbti-grid">
+        <button class="chip" data-value="INTJ">INTJ<span class="chip__sub">建筑师</span></button>
+        <button class="chip" data-value="INTP">INTP<span class="chip__sub">逻辑学家</span></button>
+        <button class="chip" data-value="ENTJ">ENTJ<span class="chip__sub">指挥官</span></button>
+        <button class="chip" data-value="ENTP">ENTP<span class="chip__sub">辩论家</span></button>
+        <button class="chip" data-value="INFJ">INFJ<span class="chip__sub">提倡者</span></button>
+        <button class="chip" data-value="INFP">INFP<span class="chip__sub">调停者</span></button>
+        <button class="chip" data-value="ENFJ">ENFJ<span class="chip__sub">主人公</span></button>
+        <button class="chip" data-value="ENFP">ENFP<span class="chip__sub">竞选者</span></button>
+        <button class="chip" data-value="ISTJ">ISTJ<span class="chip__sub">物流师</span></button>
+        <button class="chip" data-value="ISFJ">ISFJ<span class="chip__sub">守卫者</span></button>
+        <button class="chip" data-value="ESTJ">ESTJ<span class="chip__sub">总经理</span></button>
+        <button class="chip" data-value="ESFJ">ESFJ<span class="chip__sub">执政官</span></button>
+        <button class="chip" data-value="ISTP">ISTP<span class="chip__sub">鉴赏家</span></button>
+        <button class="chip" data-value="ISFP">ISFP<span class="chip__sub">探险家</span></button>
+        <button class="chip" data-value="ESTP">ESTP<span class="chip__sub">企业家</span></button>
+        <button class="chip" data-value="ESFP">ESFP<span class="chip__sub">表演者</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 脚本 -->
+<script src="js/quotes.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
