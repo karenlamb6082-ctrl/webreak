@@ -371,16 +371,24 @@
 
     // 历史功能已移除，无需再保存
 
-    // 确保 dom-to-image-more 已加载
-    if (typeof domtoimage === 'undefined') {
-      await loadDomToImage();
-    }
+    // 立即变更按钮状态，响应用户点击操作
+    saveBtn.innerHTML = '<span class="material-symbols-outlined">sync</span> 正在准备...';
+    saveBtn.style.pointerEvents = 'none';
 
     try {
-      saveBtn.textContent = '正在生成...';
+      // 确保 dom-to-image-more 已加载，附带超时拦截
+      if (typeof domtoimage === 'undefined') {
+        saveBtn.innerHTML = '<span class="material-symbols-outlined">cloud_download</span> 加载组件...';
+        await loadDomToImage();
+      }
 
-      // 等待字体加载完成
-      await document.fonts.ready;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span> 正在生成...';
+
+      // 等待字体加载完成 (最多等 2 秒，防止移动端字体 Promise 卡死)
+      await Promise.race([
+        document.fonts.ready,
+        new Promise(resolve => setTimeout(resolve, 2000))
+      ]);
 
       // 临时去掉阴影和 margin（不影响页面展示，截完恢复）
       const origBoxShadow = cardEl.style.boxShadow;
@@ -435,6 +443,7 @@
       saveBtn.innerHTML = '<span class="material-symbols-outlined">check</span> 生成成功';
       setTimeout(() => {
         saveBtn.innerHTML = '<span class="material-symbols-outlined">download</span> 保存破冰卡片到相册';
+        saveBtn.style.pointerEvents = '';
       }, 2000);
     } catch (err) {
       console.error('导出失败:', err);
@@ -442,6 +451,7 @@
       cardEl.style.boxShadow = '';
       cardEl.style.margin = '';
       saveBtn.innerHTML = '<span class="material-symbols-outlined">download</span> 保存破冰卡片到相册';
+      saveBtn.style.pointerEvents = '';
       fallbackSave();
     }
   }
@@ -505,9 +515,21 @@
   function loadDomToImage() {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/dom-to-image-more@3.4.5/dist/dom-to-image-more.min.js';
-      script.onload = resolve;
-      script.onerror = reject;
+      // 使用更稳定、速度更快的国内 npm 镜像源
+      script.src = 'https://npm.elemecdn.com/dom-to-image-more@3.4.5/dist/dom-to-image-more.min.js';
+      
+      const timeout = setTimeout(() => {
+        reject(new Error('CDN 加载超时'));
+      }, 5000);
+
+      script.onload = () => {
+        clearTimeout(timeout);
+        resolve();
+      };
+      script.onerror = () => {
+        clearTimeout(timeout);
+        reject(new Error('CDN 加载失败'));
+      };
       document.head.appendChild(script);
     });
   }
