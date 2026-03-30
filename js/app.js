@@ -37,7 +37,6 @@
 
   // ========== 初始化 ==========
   function init() {
-    bindNavigation();
     bindFormInteractions();
     bindPreviewActions();
     bindHomeActions();
@@ -74,7 +73,6 @@
     }, direction ? 50 : 0);
 
     state.currentPage = pageName;
-    updateNavState(pageName);
     updateTopBar(pageName);
 
     // 编辑页的生成按钮显示控制
@@ -84,9 +82,7 @@
     }
   }
 
-  function updateNavState() {
-    // 底部导航已删除，无需操作
-  }
+
 
   function updateTopBar(pageName) {
     const actionIcon = topBarAction.querySelector('.material-symbols-outlined');
@@ -102,10 +98,7 @@
     }
   }
 
-  // ========== 导航绑定 ==========
-  function bindNavigation() {
-    // 底部导航已删除，无需绑定
-  }
+
 
   // ========== 首页操作 ==========
   function bindHomeActions() {
