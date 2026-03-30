@@ -40,10 +40,25 @@
     bindFormInteractions();
     bindPreviewActions();
     bindHomeActions();
+    initHistory();
+  }
+
+  // ========== 浏览器历史记录管理 ==========
+  function initHistory() {
+    // 初始化当前页面状态到历史记录
+    history.replaceState({ page: 'home' }, '', '');
+
+    // 监听浏览器返回（手机侧滑、物理返回键等）
+    window.addEventListener('popstate', (e) => {
+      const targetPage = e.state ? e.state.page : 'home';
+      // 使用内部导航，但不再写入历史记录（因为是浏览器自动回退的）
+      navigateTo(targetPage, 'back', true);
+    });
   }
 
   // ========== 页面路由 ==========
-  function navigateTo(pageName, direction) {
+  // skipHistory: 由 popstate 触发时为 true，避免重复写入历史记录
+  function navigateTo(pageName, direction, skipHistory) {
     const prevPage = state.currentPage;
     if (prevPage === pageName) return;
 
@@ -51,6 +66,11 @@
     const nextEl = pages[pageName];
 
     if (!nextEl) return;
+
+    // 前进时写入浏览器历史记录，使侧滑返回可以回到上一页
+    if (direction === 'forward' && !skipHistory) {
+      history.pushState({ page: pageName }, '', '');
+    }
 
     // 退出当前页面
     if (prevEl) {
