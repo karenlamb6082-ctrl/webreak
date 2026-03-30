@@ -356,6 +356,19 @@
 
     <!-- 操作按钮 -->
     <div class="preview-actions">
+      <!-- 主题配色选择器 -->
+      <div class="theme-picker" id="themePicker">
+        <span class="theme-picker__label">选择配色</span>
+        <div class="theme-picker__dots">
+          <button class="theme-dot selected" data-theme="ocean" aria-label="蓝调" style="--dot-color: #3d637e;"></button>
+          <button class="theme-dot" data-theme="coral" aria-label="珊瑚" style="--dot-color: #c26856;"></button>
+          <button class="theme-dot" data-theme="forest" aria-label="森林" style="--dot-color: #3d7e6b;"></button>
+          <button class="theme-dot" data-theme="violet" aria-label="紫梦" style="--dot-color: #6b4a8a;"></button>
+          <button class="theme-dot" data-theme="amber" aria-label="琥珀" style="--dot-color: #8a7043;"></button>
+          <button class="theme-dot" data-theme="rose" aria-label="玫瑰" style="--dot-color: #8a4a62;"></button>
+          <button class="theme-dot" data-theme="midnight" aria-label="暮色" style="--dot-color: #2d3142;"></button>
+        </div>
+      </div>
       <button class="btn-primary-large" id="btnSave">
         <span class="material-symbols-outlined">download</span>
         保存破冰卡片到相册

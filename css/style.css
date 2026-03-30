@@ -1349,7 +1349,134 @@ a {
   transform: scale(0.97);
 }
 
+/* --- 主题配色选择器 --- */
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-card);
+}
 
+.theme-picker__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  white-space: nowrap;
+}
+
+.theme-picker__dots {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.theme-dot {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-full);
+  background: var(--dot-color);
+  border: 2.5px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.theme-dot:active {
+  transform: scale(0.88);
+}
+
+.theme-dot.selected {
+  border-color: var(--dot-color);
+  background: transparent;
+  box-shadow: inset 0 0 0 4px var(--dot-color), inset 0 0 0 6px var(--surface-container-lowest);
+}
+
+/* --- 破冰卡配色主题 --- */
+
+/* 蓝调 (默认) */
+.result-card[data-theme="ocean"] .result-card__hero-bg,
+.result-card:not([data-theme]) .result-card__hero-bg {
+  background: linear-gradient(135deg, #3d637e 0%, #4a7a9b 40%, #6ba3c4 100%);
+}
+.result-card[data-theme="ocean"] .result-card__quote,
+.result-card:not([data-theme]) .result-card__quote {
+  border-left-color: #3d637e;
+}
+
+/* 珊瑚 */
+.result-card[data-theme="coral"] .result-card__hero-bg {
+  background: linear-gradient(135deg, #c26856 0%, #d4896a 40%, #e8b49e 100%);
+}
+.result-card[data-theme="coral"] .result-card__hero-bg::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+.result-card[data-theme="coral"] .result-card__quote {
+  border-left-color: #c26856;
+  background: linear-gradient(135deg, rgba(194, 104, 86, 0.06), rgba(194, 104, 86, 0.02));
+}
+
+/* 森林 */
+.result-card[data-theme="forest"] .result-card__hero-bg {
+  background: linear-gradient(135deg, #3d7e6b 0%, #4a9b85 40%, #6bc4a8 100%);
+}
+.result-card[data-theme="forest"] .result-card__hero-bg::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.result-card[data-theme="forest"] .result-card__quote {
+  border-left-color: #3d7e6b;
+  background: linear-gradient(135deg, rgba(61, 126, 107, 0.06), rgba(61, 126, 107, 0.02));
+}
+
+/* 紫梦 */
+.result-card[data-theme="violet"] .result-card__hero-bg {
+  background: linear-gradient(135deg, #6b4a8a 0%, #8a6baa 40%, #b49ecc 100%);
+}
+.result-card[data-theme="violet"] .result-card__hero-bg::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+.result-card[data-theme="violet"] .result-card__quote {
+  border-left-color: #6b4a8a;
+  background: linear-gradient(135deg, rgba(107, 74, 138, 0.06), rgba(107, 74, 138, 0.02));
+}
+
+/* 琥珀 */
+.result-card[data-theme="amber"] .result-card__hero-bg {
+  background: linear-gradient(135deg, #8a7043 0%, #aa8a55 40%, #ccb07a 100%);
+}
+.result-card[data-theme="amber"] .result-card__hero-bg::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+.result-card[data-theme="amber"] .result-card__quote {
+  border-left-color: #8a7043;
+  background: linear-gradient(135deg, rgba(138, 112, 67, 0.06), rgba(138, 112, 67, 0.02));
+}
+
+/* 玫瑰 */
+.result-card[data-theme="rose"] .result-card__hero-bg {
+  background: linear-gradient(135deg, #8a4a62 0%, #aa6b82 40%, #cc9eb0 100%);
+}
+.result-card[data-theme="rose"] .result-card__hero-bg::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+.result-card[data-theme="rose"] .result-card__quote {
+  border-left-color: #8a4a62;
+  background: linear-gradient(135deg, rgba(138, 74, 98, 0.06), rgba(138, 74, 98, 0.02));
+}
+
+/* 暮色 */
+.result-card[data-theme="midnight"] .result-card__hero-bg {
+  background: linear-gradient(135deg, #2d3142 0%, #414660 40%, #5a6080 100%);
+}
+.result-card[data-theme="midnight"] .result-card__hero-bg::before {
+  background: rgba(255, 255, 255, 0.06);
+}
+.result-card[data-theme="midnight"] .result-card__quote {
+  border-left-color: #2d3142;
+  background: linear-gradient(135deg, rgba(45, 49, 66, 0.08), rgba(45, 49, 66, 0.02));
+}
 
 /* --- 工具类 --- */
 .sr-only {
@@ -1379,4 +1506,3 @@ a {
 }
 
 /* 文件结尾 */
-

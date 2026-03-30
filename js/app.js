@@ -23,6 +23,7 @@
       city: '',          // 单选 + 自定义
     },
     currentQuote: '',
+    currentTheme: 'ocean',  // 当前卡片配色主题
     savedCards: [],       // localStorage 持久化
   };
 
@@ -376,6 +377,23 @@
       document.getElementById('resultQuote').textContent = newQuote;
       state.currentQuote = newQuote;
     });
+
+    // 主题配色切换
+    const themePicker = document.getElementById('themePicker');
+    if (themePicker) {
+      themePicker.addEventListener('click', (e) => {
+        const dot = e.target.closest('.theme-dot');
+        if (!dot) return;
+        const theme = dot.dataset.theme;
+        // 更新选中状态
+        themePicker.querySelectorAll('.theme-dot').forEach(d => d.classList.remove('selected'));
+        dot.classList.add('selected');
+        // 应用主题到卡片
+        const card = document.getElementById('resultCard');
+        card.setAttribute('data-theme', theme);
+        state.currentTheme = theme;
+      });
+    }
   }
 
   async function handleSaveCard() {
